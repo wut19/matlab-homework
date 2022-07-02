@@ -1,0 +1,21 @@
+figure, 
+subplot(2,2,1), hold on, box on;
+plot(t,h,'k-');
+set(gca,'FontSize',16,'XLim',[-20 20],'YLim',[-0.1 1]);
+xlabel('t');
+ylabel('h(t)');
+subplot(2,2,2), hold on, box on;
+plot(omg,real(H),'k-');
+set(gca,'FontSize',16,'XLim',[-10*pi 10*pi],'YLim',[0 1]);
+xlabel('\omega');
+ylabel('real[H(\omega)]');
+subplot(2,2,3), hold on, box on;
+plot(t,real(h1),'k-');
+set(gca,'FontSize',16,'XLim',[-20 20],'YLim',[-0.1 1]);
+xlabel('t');
+ylabel('h_1(t)');
+subplot(2,2,4), hold on, box on;
+plot(omg,imag(H1),'k-');
+set(gca,'FontSize',16,'XLim',[-10*pi 10*pi],'YLim',[-0.5 0.5]);
+xlabel('\omega');
+ylabel('imag(H_1[\omega)]');

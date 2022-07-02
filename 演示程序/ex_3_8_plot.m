@@ -1,0 +1,14 @@
+figure;                       
+subplot(3,1,1), box on, hold on; 
+set(gca,'FontSize',16,'YLim',[-0.2,1.2]);
+plot(t,e,'k');
+ylabel('e(t)');
+subplot(3,1,2), box on, hold on;
+set(gca,'FontSize',16,'YLim',[-0.2,1.2]);
+plot(t,h,'k');       
+ylabel('h(t)');
+subplot(3,1,3), box on, hold on;
+set(gca,'FontSize',16,'YLim',[-0.2,1.2]);
+plot(tr,r,'k');
+xlabel('Time(sec)');
+ylabel('r(t)');

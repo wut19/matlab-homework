@@ -1,0 +1,21 @@
+figure;
+subplot(2,1,1), hold on, box on;
+stem(n,x1,'k-');
+ylabel('x_1','FontSize',14);
+set(gca,'YLim',[-1.5,1.5],'FontSize',14);
+subplot(2,1,2), hold on, box on;
+stem(n,y(:,1),'k-');
+xlabel('n','FontSize',14);
+ylabel('y_1','FontSize',14);
+set(gca,'YLim',[-1.5,1.5],'FontSize',14);
+
+figure;
+subplot(2,1,1), hold on, box on;
+stem(n,x2,'k-');
+ylabel('x_2','FontSize',14);
+set(gca,'YLim',[-0.5,2],'FontSize',14);
+subplot(2,1,2), hold on, box on;
+stem(n,y(:,2),'k-');
+xlabel('n','FontSize',14);
+ylabel('y_2','FontSize',14);
+set(gca,'YLim',[-0.5,2],'FontSize',14);

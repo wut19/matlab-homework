@@ -1,0 +1,10 @@
+close all,clear all,clc;
+P = imread('Faces\test13.jfif');
+[height,width,channel] = size(P);
+faceDetection(P,4);
+P1 = imrotate(P,90);
+faceDetection(P1,4);
+P2 = imresize(P,[height,2*width]);
+faceDetection(P2,4);
+P3 = imadjust(P,[0.4,0.1,0.2;0.6,0.9,0.8],[]);
+faceDetection(P3,4);

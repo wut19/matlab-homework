@@ -1,0 +1,18 @@
+close all,clear all,clc;
+a = [1,-1.3789,0.9506];
+b = [1];
+figure;
+zplane(b,a);
+figure;
+freqz(b,a);
+n = [0:15]';
+figure;
+subplot(2,1,1);
+impz(b,a,n);
+x = (n==0);
+y = filter(b,a,x);
+subplot(2,1,2);
+stem(n,y);
+xlabel('n(samples)');
+ylabel('Amplitude');
+title('filter response');

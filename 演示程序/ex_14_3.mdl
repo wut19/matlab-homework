@@ -1,0 +1,1597 @@
+Model {
+  Name			  "ex_6_5"
+  Version		  6.3
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.20"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "GBK"
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Wed Aug 16 09:54:06 2006"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Yuantao Gu"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Mon Aug 06 22:22:12 2007"
+  ModelVersionFormat	  "1.%<AutoIncrement:20>"
+  ConfigurationManager	  "None"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  StrictBusMsg		  "Warning"
+  ProdHWDeviceType	  "32-bit Generic"
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.1.0"
+      Array {
+	Type			"Handle"
+	Dimension		7
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.1.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  RateTranMode		  "Deterministic"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.1.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    5
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "InitFltsAndDblsToZero"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.1.0"
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  ParameterPooling	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  BufferReusableBoundary  on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.1.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  CheckSSInitialOutputMsg on
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "TryResolveAllWithWarning"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "warning"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  ModelReferenceSimTargetVerbose off
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.1.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.1.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  8
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    "IncludeHyperlinkInReport"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.1.0"
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      9
+	      Array {
+		Type			"Cell"
+		Dimension		9
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.1.0"
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      PrefixModelToSubsysFcnNames on
+	      CustomSymbolStr	      "$R$N$M"
+	      MangleLength	      1
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      10
+	      Array {
+		Type			"Cell"
+		Dimension		12
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.1.0"
+	      TargetFcnLib	      "ansi_tfl_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      GenFloatMathFcnCalls    "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      SimulationMode	      "normal"
+      CurrentDlgPage	      "Solver"
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      DataTypeConversion
+      OutDataTypeMode	      "Inherit via back propagation"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      ConvertRealWorld	      "Real World Value (RWV)"
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      FromWorkspace
+      VariableName	      "simulink_input"
+      SampleTime	      "-1"
+      Interpolate	      on
+      ZeroCross		      off
+      OutputAfterFinalValue   "Extrapolation"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Math
+      Operator		      "exp"
+      OutputSignalType	      "auto"
+      SampleTime	      "-1"
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      "M-S-Function"
+      FunctionName	      "mlfile"
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Scope
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+    }
+    Block {
+      BlockType		      Sin
+      SineType		      "Time based"
+      TimeSource	      "Use simulation time"
+      Amplitude		      "1"
+      Bias		      "0"
+      Frequency		      "1"
+      Phase		      "0"
+      Samples		      "10"
+      Offset		      "0"
+      SampleTime	      "-1"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      on
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      TransferFcn
+      Numerator		      "[1]"
+      Denominator	      "[1 2 1]"
+      AbsoluteTolerance	      "auto"
+      Realization	      "auto"
+    }
+    Block {
+      BlockType		      ZeroOrderHold
+      SampleTime	      "1"
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "arial"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "ex_6_5"
+    Location		    [419, 251, 955, 541]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "a4letter"
+    PaperUnits		    "centimeters"
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Sum
+      Name		      "Add"
+      Ports		      [2, 1]
+      Position		      [125, 107, 155, 138]
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutScaling	      "2^-10"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope"
+      Ports		      [2]
+      Position		      [390, 66, 420, 99]
+      Floating		      off
+      Location		      [117, 269, 655, 601]
+      Open		      off
+      NumInputPorts	      "2"
+      List {
+	ListType		AxesTitles
+	axes1			"input"
+	axes2			"output"
+      }
+      TimeRange		      "4"
+      YMin		      "-5~-4"
+      YMax		      "5~4"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+      Decimation	      "100"
+      SampleInput	      on
+      SampleTime	      "0.001"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Signal Builder"
+      Tag		      "STV Subsys"
+      Ports		      [0, 1]
+      Position		      [20, 55, 95, 95]
+      CopyFcn		      "sigbuilder_block('copy');"
+      DeleteFcn		      "sigbuilder_block('delete');"
+      LoadFcn		      "sigbuilder_block('load');"
+      ModelCloseFcn	      "sigbuilder_block('modelClose');"
+      PreSaveFcn	      "sigbuilder_block('preSave');"
+      StartFcn		      "sigbuilder_block('start');"
+      StopFcn		      "sigbuilder_block('stop');"
+      NameChangeFcn	      "sigbuilder_block('namechange');"
+      ClipboardFcn	      "sigbuilder_block('clipboard');"
+      OpenFcn		      "sigbuilder_block('open',[75 59.25 549.75 360 ])"
+";"
+      CloseFcn		      "sigbuilder_block('close');"
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      MaskHideContents	      off
+      MaskType		      "Sigbuilder block"
+      MaskDescription	      "Sigbuilder GUI"
+      MaskInitialization      "if ~strcmp(get_param(bdroot(gcbh),'SimulationSt"
+"atus'),'stopped') tuvar = sigbuilder_block('maskInit'); end"
+      MaskDisplay	      "plot(0,0,100,100,[10,10,40,40,10],[80,20,20,80,"
+"80],[40,10],[50,50], [40,27,10],[65,72,56],[40,25,25,10],[28,28,43,43]);"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "port"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"Signal Builder"
+	Location		[480, 85, 980, 386]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  Tag			  "STV Demux"
+	  Ports			  [1, 1]
+	  Position		  [150, 42, 160, 618]
+	  Outputs		  "1"
+	}
+	Block {
+	  BlockType		  FromWorkspace
+	  Name			  "FromWs"
+	  Tag			  "STV FromWs"
+	  Position		  [30, 300, 115, 350]
+	  VariableName		  "tuvar"
+	  SampleTime		  "0"
+	  ZeroCross		  on
+	  SigBuilderData	  "DataTag0"
+	  VnvData		  "DataTag1"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Noise"
+	  Tag			  "STV Outport"
+	  Position		  [280, 30, 300, 40]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "FromWs"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "Noise"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Sin
+      Name		      "Sine Wave"
+      Ports		      [0, 1]
+      Position		      [65, 155, 95, 185]
+      SineType		      "Time based"
+      Frequency		      "2*pi"
+      SampleTime	      "0.01"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Spectrum\nScope (input)"
+      Ports		      [1]
+      Position		      [280, 175, 315, 225]
+      DialogController	      "dspdialog.SpectrumScope"
+      DialogControllerArgs    "DataTag2"
+      SourceBlock	      "dspsnks4/Spectrum\nScope"
+      SourceType	      "Spectrum Scope"
+      ShowPortLabels	      off
+      ScopeProperties	      on
+      Domain		      "Frequency"
+      HorizSpan		      "1"
+      UseBuffer		      on
+      BufferSize	      "512"
+      Overlap		      "256"
+      inpFftLenInherit	      on
+      FFTlength		      "512"
+      numAvg		      "4"
+      DisplayProperties	      off
+      AxisGrid		      on
+      Memory		      off
+      FrameNumber	      on
+      AxisLegend	      off
+      AxisZoom		      off
+      OpenScopeAtSimStart     on
+      OpenScopeImmediately    off
+      FigPos		      "get(0,'defaultfigureposition')"
+      AxisProperties	      off
+      XUnits		      "Hertz"
+      XRange		      "[-Fs/2...Fs/2]"
+      InheritXIncr	      on
+      XIncr		      "1.0"
+      XLabel		      "Samples"
+      YUnits		      "dB"
+      YMin		      "-14.4716711950915"
+      YMax		      "17.5024783368842"
+      YLabel		      "Magnitude-squared, dB"
+      LineProperties	      off
+      wintypeSpecScope	      "Hann"
+      RsSpecScope	      "50"
+      betaSpecScope	      "5"
+      winsampSpecScope	      "Periodic"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Spectrum\nScope (output)"
+      Ports		      [1]
+      Position		      [450, 175, 485, 225]
+      DialogController	      "dspdialog.SpectrumScope"
+      DialogControllerArgs    "DataTag3"
+      SourceBlock	      "dspsnks4/Spectrum\nScope"
+      SourceType	      "Spectrum Scope"
+      ShowPortLabels	      off
+      ScopeProperties	      on
+      Domain		      "Frequency"
+      HorizSpan		      "1"
+      UseBuffer		      on
+      BufferSize	      "512"
+      Overlap		      "256"
+      inpFftLenInherit	      on
+      FFTlength		      "512"
+      numAvg		      "4"
+      DisplayProperties	      off
+      AxisGrid		      on
+      Memory		      off
+      FrameNumber	      on
+      AxisLegend	      off
+      AxisZoom		      off
+      OpenScopeAtSimStart     on
+      OpenScopeImmediately    off
+      FigPos		      "get(0,'defaultfigureposition')"
+      AxisProperties	      off
+      XUnits		      "Hertz"
+      XRange		      "[-Fs/2...Fs/2]"
+      InheritXIncr	      on
+      XIncr		      "1.0"
+      XLabel		      "Samples"
+      YUnits		      "dB"
+      YMin		      "-54.4157863941964"
+      YMax		      "17.189613355661"
+      YLabel		      "Magnitude-squared, dB"
+      LineProperties	      off
+      wintypeSpecScope	      "Hann"
+      RsSpecScope	      "50"
+      betaSpecScope	      "5"
+      winsampSpecScope	      "Periodic"
+    }
+    Block {
+      BlockType		      TransferFcn
+      Name		      "Transfer Fcn"
+      Position		      [245, 107, 305, 143]
+      Numerator		      "[25]"
+      Denominator	      "[1 25]"
+    }
+    Block {
+      BlockType		      ZeroOrderHold
+      Name		      "Zero-Order\nHold"
+      Position		      [215, 185, 250, 215]
+      SampleTime	      "0.01"
+    }
+    Block {
+      BlockType		      ZeroOrderHold
+      Name		      "Zero-Order\nHold1"
+      Position		      [385, 185, 420, 215]
+      SampleTime	      "0.01"
+    }
+    Line {
+      SrcBlock		      "Zero-Order\nHold"
+      SrcPort		      1
+      DstBlock		      "Spectrum\nScope (input)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Transfer Fcn"
+      SrcPort		      1
+      Points		      [0, 0; 45, 0]
+      Branch {
+	Points			[0, 75]
+	DstBlock		"Zero-Order\nHold1"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -35]
+	DstBlock		"Scope"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Zero-Order\nHold1"
+      SrcPort		      1
+      DstBlock		      "Spectrum\nScope (output)"
+      DstPort		      1
+    }
+    Line {
+      Labels		      [2, 0]
+      SrcBlock		      "Sine Wave"
+      SrcPort		      1
+      Points		      [5, 0; 0, -40]
+      DstBlock		      "Add"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Signal Builder"
+      SrcPort		      1
+      Points		      [5, 0; 0, 40]
+      DstBlock		      "Add"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Add"
+      SrcPort		      1
+      Points		      [20, 0]
+      Branch {
+	DstBlock		"Transfer Fcn"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 75]
+	DstBlock		"Zero-Order\nHold"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -50]
+	DstBlock		"Scope"
+	DstPort			1
+      }
+    }
+  }
+}
+MatData {
+  NumRecords		  4
+  DataRecord {
+    Tag			    DataTag3
+    Data		    "  %)30     .    ,     8    (    !          %    "
+"\"                0         0          "
+  }
+  DataRecord {
+    Tag			    DataTag2
+    Data		    "  %)30     .    ,     8    (    !          %    "
+"\"                0         0          "
+  }
+  DataRecord {
+    Tag			    DataTag1
+    Data		    "  %)30     .    R ,   8    (     @         %    "
+"\"     $    !     0         %  0 $0    $   #,    =F5R:69Y0FQK4&%T:',   !V97)I"
+"9GE\";&M(86YD;&5S '9N=DUG<DED>           86-T:79E1W)O=7        !R97%$:7-P4')C"
+";G0      &)L:T1I<W!-;V1E        9W)O=7!#;G0           !G<F]U<%)E<4-N=        "
+"&=R;W5P1$]/4E-I9       ;6]D96Q(              !B;&]C:T@              &]V97)I9&"
+"53971T:6YG<P        X    P    !@    @    &          4    (               !   "
+"       D         #@   #     &    \"     8         !0    @               $    "
+"     \"0         .    ,     8    (    !@         %    \"                0    "
+"     )          X    X    !@    @    &          4    (     0    $    !       "
+"   D    (            \\#\\.    ,     8    (    !@         %    \"            "
+"    0         )          X    P    !@    @    &          4    (              "
+" !          D         #@   #@    &    \"     8         !0    @    !     0    "
+"$         \"0    @           #P/PX    P    !@    @    &          4    (      "
+"         !          D         #@   #     &    \"     8         !0    @       "
+"        $         \"0         .    .     8    (    !@         %    \"     $  "
+"  !     0         )    \"         # !0A #@   #@    &    \"     8         !0  "
+"  @    !     0    $         \"0    @         X (80 X    P    !@    @    &    "
+"      4    (               !          D         "
+  }
+  DataRecord {
+    Tag			    DataTag0
+    Data		    "  %)30     .    ((D   8    (     @         %    "
+"\"     $    !     0         %  0 %@    $   \":    9W)I9%-E='1I;F<            "
+"  &-H86YN96QS                  !A>&5S                        8V]M;6]N        "
+"             &1A=&%3970                   !D871A4V5T261X                :7-69"
+"7)I9FEC871I;VY6:7-I8FQE          X    P    !@    @    $          4    (     0"
+"    (    !         !   @!O;@  #@   -B!   &    \"     (         !0    @    !  "
+"   0    $         !0 $  H    !    @@   'A$871A      !Y1&%T80      <W1E<%@    "
+"  '-T97!9      !Y36EN        >4UA>        &-O;&]R      !L:6YE4W1Y;&4 ;&EN95=I"
+"9'1H &QA8F5L      !O=71);F1E>   86QL6$1A=&$  &%L;%E$871A           .    F!\\ "
+"  8    (    !@         %    \"     $   #M P   0         )    :!\\            "
+" >Q2N1^%ZA#][%*Y'X7J4/[@>A>M1N)X_>Q2N1^%ZI#^:F9F9F9FI/[@>A>M1N*X_[%&X'H7KL3]["
+"%*Y'X7JT/PK7HW ]\"K<_FIF9F9F9N3\\I7(_\"]2B\\/[@>A>M1N+X_I' ]\"M>CP#_L4;@>A>O!"
+"/S,S,S,S,\\,_>Q2N1^%ZQ#_#]2A<C\\+%/PK7HW ]\"L<_4K@>A>M1R#^:F9F9F9G)/^%Z%*Y'X<"
+"H_*5R/PO4HS#]Q/0K7HW#-/[@>A>M1N,X_        T#^D<#T*UZ/0/TCA>A2N1]$_[%&X'H7KT3^"
+"/PO4H7(_2/S,S,S,S,],_UZ-P/0K7TS][%*Y'X7K4/Q^%ZU&X'M4_P_4H7(_\"U3]G9F9F9F;6/PK"
+"7HW ]\"M<_KD?A>A2NUS]2N!Z%ZU'8/_8H7(_\"]=@_FIF9F9F9V3\\^\"M>C<#W:/^%Z%*Y'X=H_"
+"A>M1N!Z%VS\\I7(_\"]2C</\\W,S,S,S-P_<3T*UZ-PW3\\5KD?A>A3>/[@>A>M1N-X_7(_\"]2A<"
+"WS\\       #@/U*X'H7K4> _I' ]\"M>CX#_V*%R/PO7@/TCA>A2N1^$_FIF9F9F9X3_L4;@>A>O"
+"A/SX*UZ-P/>(_C\\+U*%R/XC_A>A2N1^'B/S,S,S,S,^,_A>M1N!Z%XS_7HW ]\"M?C/RE<C\\+U*"
+".0_>Q2N1^%ZY#_-S,S,S,SD/Q^%ZU&X'N4_<3T*UZ-PY3_#]2A<C\\+E/Q6N1^%Z%.8_9V9F9F9FY"
+"C^X'H7K4;CF/PK7HW ]\"N<_7(_\"]2A<YS^N1^%Z%*[G/P       .@_4K@>A>M1Z#^D<#T*UZ/H"
+"/_8H7(_\"]>@_2.%Z%*Y'Z3^:F9F9F9GI/^Q1N!Z%Z^D_/@K7HW ]ZC^0PO4H7(_J/^%Z%*Y'X>H_"
+",S,S,S,SZS^%ZU&X'H7K/]>C<#T*U^L_*5R/PO4H[#][%*Y'X7KL/\\W,S,S,S.P_'X7K4;@>[3]Q"
+"/0K7HW#M/\\/U*%R/PNT_%:Y'X7H4[C]G9F9F9F;N/[@>A>M1N.X_\"M>C<#T*[S]<C\\+U*%SO/Z"
+"Y'X7H4KN\\_        \\#\\I7(_\"]2CP/U*X'H7K4? _>Q2N1^%Z\\#^D<#T*UZ/P/\\W,S,S,S"
+"/ _]BA<C\\+U\\#\\?A>M1N![Q/TCA>A2N1_$_<3T*UZ-P\\3^:F9F9F9GQ/\\/U*%R/PO$_[%&X'"
+"H7K\\3\\5KD?A>A3R/SX*UZ-P/?(_9V9F9F9F\\C^/PO4H7(_R/[@>A>M1N/(_X7H4KD?A\\C\\*U"
+"Z-P/0KS/S,S,S,S,_,_7(_\"]2A<\\S^%ZU&X'H7S/ZY'X7H4KO,_UZ-P/0K7\\S\\       #T/R"
+"E<C\\+U*/0_4K@>A>M1]#][%*Y'X7KT/Z1P/0K7H_0_S<S,S,S,]#_V*%R/PO7T/Q^%ZU&X'O4_2."
+"%Z%*Y']3]Q/0K7HW#U/YJ9F9F9F?4_P_4H7(_\"]3_L4;@>A>OU/Q6N1^%Z%/8_/@K7HW ]]C]G9F"
+"9F9F;V/X_\"]2A<C_8_N!Z%ZU&X]C_A>A2N1^'V/PK7HW ]\"O<_,S,S,S,S]S]<C\\+U*%SW/X7K"
+"4;@>A?<_KD?A>A2N]S_7HW ]\"M?W/P       /@_*5R/PO4H^#]2N!Z%ZU'X/WL4KD?A>O@_I' ]"
+"\"M>C^#_-S,S,S,SX/_8H7(_\"]?@_'X7K4;@>^3](X7H4KD?Y/W$]\"M>C</D_FIF9F9F9^3_#]2"
+"A<C\\+Y/^Q1N!Z%Z_D_%:Y'X7H4^C\\^\"M>C<#WZ/V=F9F9F9OH_D,+U*%R/^C^X'H7K4;CZ/^%Z"
+"%*Y'X?H_\"M>C<#T*^S\\S,S,S,S/[/UR/PO4H7/L_A>M1N!Z%^S^N1^%Z%*[[/]>C<#T*U_L_   "
+"     _#\\I7(_\"]2C\\/U*X'H7K4?P_>Q2N1^%Z_#^D<#T*UZ/\\/\\W,S,S,S/P_]BA<C\\+U_#"
+"\\?A>M1N![]/Q^%ZU&X'OT_2.%Z%*Y'_3](X7H4KD?]/W$]\"M>C</T_FIF9F9F9_3_#]2A<C\\+]"
+"/^Q1N!Z%Z_T_%:Y'X7H4_C\\^\"M>C<#W^/V=F9F9F9OX_D,+U*%R/_C^X'H7K4;C^/^%Z%*Y'X?X"
+"_\"M>C<#T*_S\\S,S,S,S/_/UR/PO4H7/\\_A>M1N!Z%_S^%ZU&X'H7_/ZY'X7H4KO\\_KD?A>A2N"
+"_S_7HW ]\"M?_/P        ! %:Y'X7H4 $ I7(_\"]2@ 0#X*UZ-P/0! 4K@>A>M1 $!F9F9F9F8"
+" 0'L4KD?A>@! C\\+U*%R/ $\"D<#T*UZ, 0+@>A>M1N ! S<S,S,S, $#A>A2N1^$ 0/8H7(_\"]"
+"0! \"M>C<#T* 4 ?A>M1N!X!0#,S,S,S,P% 2.%Z%*Y' 4!<C\\+U*%P!0'$]\"M>C< % A>M1N!Z"
+"% 4\":F9F9F9D!0*Y'X7H4K@% P_4H7(_\" 4#7HW ]\"M<!0.Q1N!Z%ZP%          D 5KD?A>"
+"A0\"0\"E<C\\+U* ) /@K7HW ] D!2N!Z%ZU$\"0&=F9F9F9@) >Q2N1^%Z D\"/PO4H7(\\\"0*1"
+"P/0K7HP) N!Z%ZU&X D#-S,S,S,P\"0.%Z%*Y'X0) ]BA<C\\+U D *UZ-P/0H#0!^%ZU&X'@- ,S"
+",S,S,S T!(X7H4KD<#0%R/PO4H7 - <3T*UZ-P T\"%ZU&X'H4#0)J9F9F9F0- KD?A>A2N T##]2"
+"A<C\\(#0->C<#T*UP- [%&X'H7K T         $0!6N1^%Z% 1 *5R/PO4H!$ ^\"M>C<#T$0%*X'"
+"H7K401 9V9F9F9F!$![%*Y'X7H$0(_\"]2A<CP1 I' ]\"M>C!$\"X'H7K4;@$0,W,S,S,S 1 X7H"
+"4KD?A!$#V*%R/PO4$0 K7HW ]\"@5 'X7K4;@>!4 S,S,S,S,%0$CA>A2N1P5 7(_\"]2A<!4!Q/0"
+"K7HW %0(7K4;@>A05 FIF9F9F9!4\"N1^%Z%*X%0,/U*%R/P@5 UZ-P/0K7!4#L4;@>A>L%0     "
+"    9 %:Y'X7H4!D I7(_\"]2@&0#X*UZ-P/09 4K@>A>M1!D!G9F9F9F8&0'L4KD?A>@9 C\\+U*"
+"%R/!D\"D<#T*UZ,&0+@>A>M1N 9 S<S,S,S,!D#A>A2N1^$&0/8H7(_\"]09 \"M>C<#T*!T ?A>M"
+"1N!X'0#,S,S,S,P= 2.%Z%*Y'!T!<C\\+U*%P'0'$]\"M>C< = A>M1N!Z%!T\":F9F9F9D'0*Y'X"
+"7H4K@= P_4H7(_\"!T#7HW ]\"M<'0.Q1N!Z%ZP=         \"$ 5KD?A>A0(0\"E<C\\+U* A /"
+"@K7HW ]\"$!2N!Z%ZU$(0&=F9F9F9@A >Q2N1^%Z\"$\"0PO4H7(\\(0*1P/0K7HPA N!Z%ZU&X\""
+"$#-S,S,S,P(0.%Z%*Y'X0A ]BA<C\\+U\"$ *UZ-P/0H)0!^%ZU&X'@E ,S,S,S,S\"4!(X7H4KD<"
+")0%R/PO4H7 E <3T*UZ-P\"4\"%ZU&X'H4)0)J9F9F9F0E KD?A>A2N\"4##]2A<C\\()0->C<#T*"
+"UPE [%&X'H7K\"4         *0!6N1^%Z% I *5R/PO4H\"D ^\"M>C<#T*0%*X'H7K40I 9V9F9F"
+"9F\"D![%*Y'X7H*0)#\"]2A<CPI I' ]\"M>C\"D\"X'H7K4;@*0,W,S,S,S I X7H4KD?A\"D#V*"
+"%R/PO4*0 K7HW ]\"@M 'X7K4;@>\"T S,S,S,S,+0$CA>A2N1PM 7(_\"]2A<\"T!Q/0K7HW +0("
+"7K4;@>A0M FIF9F9F9\"T\"N1^%Z%*X+0,/U*%R/P@M UZ-P/0K7\"T#L4;@>A>L+0         Q "
+"%:Y'X7H4#$ I7(_\"]2@,0#X*UZ-P/0Q 4K@>A>M1#$!G9F9F9F8,0'L4KD?A>@Q D,+U*%R/#$\""
+"D<#T*UZ,,0+@>A>M1N Q S<S,S,S,#$#A>A2N1^$,0/8H7(_\"]0Q \"M>C<#T*#4 ?A>M1N!X-0#"
+",S,S,S,PU 2.%Z%*Y'#4!<C\\+U*%P-0'$]\"M>C< U A>M1N!Z%#4\":F9F9F9D-0*Y'X7H4K@U "
+"P_4H7(_\"#4#7HW ]\"M<-0.Q1N!Z%ZPU         #D 5KD?A>A0.0\"E<C\\+U* Y /@K7HW ]#"
+"D!2N!Z%ZU$.0&=F9F9F9@Y >Q2N1^%Z#D\"0PO4H7(\\.0*1P/0K7HPY N!Z%ZU&X#D#-S,S,S,P."
+"0.%Z%*Y'X0Y ]BA<C\\+U#D *UZ-P/0H/0!^%ZU&X'@] ,S,S,S,S#T!(X7H4KD</0%R/PO4H7 ] "
+"<3T*UZ-P#T\"%ZU&X'H4/0)J9F9F9F0] KD?A>A2N#T##]2A<C\\(/0->C<#T*UP] [%&X'H7K#T "
+"        00 K7HW ]\"A! %:Y'X7H4$$ ?A>M1N!X00\"E<C\\+U*!! ,S,S,S,S$$ ^\"M>C<#T0"
+"0$CA>A2N1Q! 4K@>A>M1$$!<C\\+U*%P00&9F9F9F9A! <3T*UZ-P$$![%*Y'X7H00(7K4;@>A1! "
+"C\\+U*%R/$$\":F9F9F9D00*1P/0K7HQ! KD?A>A2N$$\"X'H7K4;@00,/U*%R/PA! S<S,S,S,$$"
+"#7HW ]\"M<00.%Z%*Y'X1! [%&X'H7K$$#V*%R/PO400        !% \"M>C<#T*$4 5KD?A>A010"
+"!^%ZU&X'A% *5R/PO4H$4 S,S,S,S,10#X*UZ-P/1% 2.%Z%*Y'$4!2N!Z%ZU$10%R/PO4H7!% 9V"
+"9F9F9F$4!Q/0K7HW 10'L4KD?A>A% A>M1N!Z%$4\"/PO4H7(\\10)J9F9F9F1% I' ]\"M>C$4\""
+"N1^%Z%*X10+@>A>M1N!% P_4H7(_\"$4#-S,S,S,P10->C<#T*UQ% X7H4KD?A$4#L4;@>A>L10/8"
+"H7(_\"]1%         $D *UZ-P/0H20!6N1^%Z%!) 'X7K4;@>$D I7(_\"]2@20#,S,S,S,Q) /@"
+"K7HW ]$D!(X7H4KD<20%*X'H7K41) 7(_\"]2A<$D!G9F9F9F820'$]\"M>C<!) >Q2N1^%Z$D\"%"
+"ZU&X'H420(_\"]2A<CQ) FIF9F9F9$D\"D<#T*UZ,20*Y'X7H4KA) N!Z%ZU&X$D##]2A<C\\(20,"
+"W,S,S,S!) UZ-P/0K7$D#A>A2N1^$20.Q1N!Z%ZQ) ]BA<C\\+U$D         30 K7HW ]\"A- %"
+":Y'X7H4$T ?A>M1N!X30\"E<C\\+U*!- ,S,S,S,S$T ^\"M>C<#T30$CA>A2N1Q- 4K@>A>M1$T!"
+"<C\\+U*%P30&=F9F9F9A- <3T*UZ-P$T![%*Y'X7H30(7K4;@>A1- C\\+U*%R/$T\":F9F9F9D30"
+"*1P/0K7HQ- KD?A>A2N$T\"X'H7K4;@30,/U*%R/PA- S<S,S,S,$T#7HW ]\"M<30.%Z%*Y'X1- "
+"[%&X'H7K$T#V*%R/PO430        !1 \"M>C<#T*%$ 4KD?A>A040!^%ZU&X'A1 *5R/PO4H%$ S"
+",S,S,S,40#T*UZ-P/11 2.%Z%*Y'%$!2N!Z%ZU$40%R/PO4H7!1 9F9F9F9F%$!Q/0K7HW 40'L4K"
+"D?A>A1 A>M1N!Z%%$\"/PO4H7(\\40)F9F9F9F11 I' ]\"M>C%$\"N1^%Z%*X40+@>A>M1N!1 PO"
+"4H7(_\"%$#-S,S,S,P40->C<#T*UQ1 X7H4KD?A%$#K4;@>A>L40/8H7(_\"]11         %4 *U"
+"Z-P/0H50!2N1^%Z%!5 'X7K4;@>%4 I7(_\"]2@50#,S,S,S,Q5 /0K7HW ]%4!(X7H4KD<50%*X'"
+"H7K415 7(_\"]2A<%4!F9F9F9F850'$]\"M>C<!5 >Q2N1^%Z%4\"%ZU&X'H450(_\"]2A<CQ5 F9"
+"F9F9F9%4\"D<#T*UZ,50*Y'X7H4KA5 N!Z%ZU&X%4#\"]2A<C\\(50,W,S,S,S!5 UZ-P/0K7%4#A"
+">A2N1^$50.M1N!Z%ZQ5 ]BA<C\\+U%4         60 K7HW ]\"A9 %*Y'X7H4%D ?A>M1N!X60\""
+"E<C\\+U*!9 ,S,S,S,S%D ]\"M>C<#T60$CA>A2N1Q9 4K@>A>M1%D!<C\\+U*%P60&9F9F9F9A9 "
+"<3T*UZ-P%D![%*Y'X7H60(7K4;@>A19 C\\+U*%R/%D\"9F9F9F9D60*1P/0K7HQ9 KD?A>A2N%D"
+"\"X'H7K4;@60,+U*%R/PA9 S<S,S,S,%D#7HW ]\"M<60.%Z%*Y'X19 ZU&X'H7K%D#V*%R/PO460"
+"        != \"M>C<#T*%T 4KD?A>A070!^%ZU&X'A= *5R/PO4H%T S,S,S,S,70#T*UZ-P/1= 2"
+".%Z%*Y'%T!2N!Z%ZU$70%R/PO4H7!= 9F9F9F9F%T!Q/0K7HW 70'L4KD?A>A= A>M1N!Z%%T\"/P"
+"O4H7(\\70)J9F9F9F1= I' ]\"M>C%T\"N1^%Z%*X70+@>A>M1N!= PO4H7(_\"%T#-S,S,S,P70-"
+">C<#T*UQ= X7H4KD?A%T#K4;@>A>L70/8H7(_\"]1=         &$ *UZ-P/0H80!2N1^%Z%!A 'H"
+"7K4;@>&$ I7(_\"]2@80#,S,S,S,QA /@K7HW ]&$!(X7H4KD<80%*X'H7K41A 7(_\"]2A<&$!F9"
+"F9F9F880' ]\"M>C<!A >Q2N1^%Z&$\"%ZU&X'H480)#\"]2A<CQA FIF9F9F9&$\"D<#T*UZ,80*"
+"Y'X7H4KAA N!Z%ZU&X&$#\"]2A<C\\(80,S,S,S,S!A UZ-P/0K7&$#A>A2N1^$80.Q1N!Z%ZQA ]"
+"BA<C\\+U&$         90 K7HW ]\"AE %*Y'X7H4&4 >A>M1N!X90\"E<C\\+U*!E ,S,S,S,S&4"
+" ^\"M>C<#T90$CA>A2N1QE 4K@>A>M1&4!<C\\+U*%P90&9F9F9F9AE <#T*UZ-P&4![%*Y'X7H90"
+"(7K4;@>A1E D,+U*%R/&4\":F9F9F9D90*1P/0K7HQE KD?A>A2N&4\"X'H7K4;@90,+U*%R/PAE "
+"S,S,S,S,&4#7HW ]\"M<90.%Z%*Y'X1E [%&X'H7K&4#V*%R/PO490        !I \"M>C<#T*&D "
+"4KD?A>A0:0!Z%ZU&X'AI *5R/PO4H&D S,S,S,S,:0#X*UZ-P/1I 2.%Z%*Y'&D!2N!Z%ZU$:0%R/"
+"PO4H7!I 9F9F9F9F&D!P/0K7HW :0'L4KD?A>AI A>M1N!Z%&D\"0PO4H7(\\:0)J9F9F9F1I I' "
+"]\"M>C&D\"N1^%Z%*X:0+@>A>M1N!I PO4H7(_\"&D#,S,S,S,P:0->C<#T*UQI X7H4KD?A&D#L4"
+";@>A>L:0/8H7(_\"]1I         &T *UZ-P/0H;0!2N1^%Z%!M 'H7K4;@>&T I7(_\"]2@;0#,S"
+",S,S,QM /@K7HW ]&T!(X7H4KD<;0%*X'H7K41M 7(_\"]2A<&T!F9F9F9F8;0' ]\"M>C<!M >Q2"
+"N1^%Z&T\"%ZU&X'H4;0)#\"]2A<CQM FIF9F9F9&T\"D<#T*UZ,;0*Y'X7H4KAM N!Z%ZU&X&T#\""
+"]2A<C\\(;0,S,S,S,S!M UZ-P/0K7&T#A>A2N1^$;0.Q1N!Z%ZQM ]BA<C\\+U&T         <0 K"
+"7HW ]\"AQ %*Y'X7H4'$ >A>M1N!X<0\"E<C\\+U*!Q ,S,S,S,S'$ ^\"M>C<#T<0$CA>A2N1QQ "
+"4K@>A>M1'$!<C\\+U*%P<0&9F9F9F9AQ <#T*UZ-P'$![%*Y'X7H<0(7K4;@>A1Q D,+U*%R/'$\""
+":F9F9F9D<0*1P/0K7HQQ KD?A>A2N'$\"X'H7K4;@<0,+U*%R/PAQ S,S,S,S,'$#7HW ]\"M<<0."
+"%Z%*Y'X1Q [%&X'H7K'$#V*%R/PO4<0        !U \"M>C<#T*'4 4KD?A>A0=0!Z%ZU&X'AU *5"
+"R/PO4H'4 S,S,S,S,=0#X*UZ-P/1U 2.%Z%*Y''4!2N!Z%ZU$=0%R/PO4H7!U 9F9F9F9F'4!P/0K"
+"7HW =0'L4KD?A>AU A>M1N!Z%'4\"0PO4H7(\\=0)J9F9F9F1U I' ]\"M>C'4\"N1^%Z%*X=0+@>"
+"A>M1N!U PO4H7(_\"'4#,S,S,S,P=0->C<#T*UQU X7H4KD?A'4#L4;@>A>L=0/8H7(_\"]1U    "
+"     'D *UZ-P/0H>0!2N1^%Z%!Y 'H7K4;@>'D I7(_\"]2@>0#,S,S,S,QY /@K7HW ]'D!(X7H"
+"4KD<>0%*X'H7K41Y 7(_\"]2A<'D!F9F9F9F8>0' ]\"M>C<!Y >Q2N1^%Z'D\"%ZU&X'H4>0)#\""
+"]2A<CQY FIF9F9F9'D\"D<#T*UZ,>0*Y'X7H4KAY N!Z%ZU&X'D#\"]2A<C\\(>0,S,S,S,S!Y UZ"
+"-P/0K7'D#A>A2N1^$>0.Q1N!Z%ZQY ]BA<C\\+U'D         ?0 K7HW ]\"A] %*Y'X7H4'T >A"
+">M1N!X?0\"E<C\\+U*!] ,S,S,S,S'T ^\"M>C<#T?0$CA>A2N1Q] 4K@>A>M1'T!<C\\+U*%P?0&"
+"9F9F9F9A] <#T*UZ-P'T![%*Y'X7H?0(7K4;@>A1] D,+U*%R/'T\":F9F9F9D?0*1P/0K7HQ] KD"
+"?A>A2N'T\"X'H7K4;@?0,+U*%R/PA] S<S,S,S,'T#7HW ]\"M<?0.%Z%*Y'X1] [%&X'H7K'T#V*"
+"%R/PO4?0        \"! A>M1N!X%($ *UZ-P/0H@0(_\"]2A<#R! %*Y'X7H4($\":F9F9F1D@0!^"
+"%ZU&X'B! I' ]\"M<C($ I7(_\"]2@@0*Y'X7H4+B! ,S,S,S,S($\"X'H7K43@@0#T*UZ-P/2! P"
+"O4H7(]\"($!(X7H4KD<@0,W,S,S,3\"! 4K@>A>M1($#7HW ]\"E<@0%R/PO4H7\"! X7H4KD=A($"
+"!F9F9F9F8@0.Q1N!Z%:R! <3T*UZ-P($#V*%R/PG4@0'L4KD?A>B!       \" ($\"%ZU&X'H4@0"
+" K7HW ]BB! C\\+U*%R/($ 4KD?A>I0@0)J9F9F9F2! 'X7K4;B>($\"D<#T*UZ,@0\"E<C\\+UJ"
+"\"! KD?A>A2N($ S,S,S,[,@0+@>A>M1N\"! /0K7HW\"]($#\"]2A<C\\(@0$CA>A2NQR! S<S,S"
+",S,($!2N!Z%Z]$@0->C<#T*UR! 7(_\"]2C<($#A>A2N1^$@0&9F9F9FYB! [%&X'H7K($!Q/0K7H"
+"_ @0/8H7(_\"]2! >Q2N1^'Z($         A0(7K4;@>!2% \"M>C<#T*(4\"/PO4H7 \\A0!2N1^"
+"%Z%\"% FIF9F9D9(4 ?A>M1N!XA0*1P/0K7(R% *5R/PO4H(4\"N1^%Z%\"XA0#,S,S,S,R% N!Z%"
+"ZU$X(4 ]\"M>C<#TA0,+U*%R/0B% 2.%Z%*Y'(4#-S,S,S$PA0%*X'H7K42% UZ-P/0I7(4!<C\\+"
+"U*%PA0.%Z%*Y'82% 9F9F9F9F(4#L4;@>A6LA0'$]\"M>C<\"% ]BA<C\\)U(4![%*Y'X7HA0    "
+"   @\"% A>M1N!Z%(4 *UZ-P/8HA0(_\"]2A<CR% %*Y'X7J4(4\":F9F9F9DA0!^%ZU&XGB% I' "
+"]\"M>C(4 I7(_\"]:@A0*Y'X7H4KB% ,S,S,S.S(4\"X'H7K4;@A0#T*UZ-PO2% PO4H7(_\"(4!("
+"X7H4KL<A0,W,S,S,S\"% 4K@>A>O1(4#7HW ]\"M<A0%R/PO4HW\"% X7H4KD?A(4!F9F9F9N8A0."
+"Q1N!Z%ZR% <3T*UZ/P(4#V*%R/PO4A0'L4KD?A^B%         (D\"%ZU&X'@4B0 K7HW ]\"B) C"
+"\\+U*%P/(D 4KD?A>A0B0)J9F9F9&2) 'X7K4;@>(D\"D<#T*UR,B0\"E<C\\+U*\") KD?A>A0N("
+"D S,S,S,S,B0+@>A>M1.\") /0K7HW ](D##]2A<CT(B0$CA>A2N1R) S<S,S,Q,(D!2N!Z%ZU$B0"
+"->C<#T*5R) 7(_\"]2A<(D#A>A2N1V$B0&9F9F9F9B) [%&X'H5K(D!Q/0K7HW B0/8H7(_\"=2) "
+">Q2N1^%Z(D       ( B0(7K4;@>A2) \"M>C<#V*(D\"/PO4H7(\\B0!2N1^%ZE\") FIF9F9F9("
+"D ?A>M1N)XB0*1P/0K7HR) *5R/PO6H(D\"N1^%Z%*XB0#,S,S,SLR) N!Z%ZU&X(D ]\"M>C<+TB"
+"0,/U*%R/PB) 2.%Z%*['(D#-S,S,S,PB0%*X'H7KT2) UZ-P/0K7(D!<C\\+U*-PB0.%Z%*Y'X2) "
+"9F9F9F;F(D#L4;@>A>LB0'$]\"M>C\\\") ]BA<C\\+U(D![%*Y'X?HB0        \"- A>M1N!X%"
+"(T *UZ-P/0HC0(_\"]2A<#R- %*Y'X7H4(T\":F9F9F1DC0!^%ZU&X'B- I' ]\"M<C(T I7(_\"]"
+"2@C0*Y'X7H4+B- ,S,S,S,S(T\"X'H7K43@C0#T*UZ-P/2- P_4H7(]\"(T!(X7H4KD<C0,W,S,S,"
+"3\"- 4K@>A>M1(T#7HW ]\"E<C0%R/PO4H7\"- X7H4KD=A(T!F9F9F9F8C0.Q1N!Z%:R- <3T*UZ"
+"-P(T#V*%R/PG4C0'L4KD?A>B-       \" (T\"%ZU&X'H4C0 K7HW ]BB- C\\+U*%R/(T 4KD?A"
+">I0C0)J9F9F9F2- 'X7K4;B>(T\"D<#T*UZ,C0\"E<C\\+UJ\"- KD?A>A2N(T S,S,S,[,C0+@>A"
+">M1N\"- /0K7HW\"](T##]2A<C\\(C0$CA>A2NQR- S<S,S,S,(T!2N!Z%Z]$C0->C<#T*UR- 7(_"
+"\"]2C<(T#A>A2N1^$C0&9F9F9FYB- [%&X'H7K(T!Q/0K7H_ C0/8H7(_\"]2- >Q2N1^'Z(T    "
+"     D0 X   \"8'P  !@    @    &          4    (     0   .T#   !          D   "
+"!H'P  7VV>WJY%V#\\'-X$RDBGG/ZX]ND%%= / 4O6T(S@KZ3]_V?$\\:\\GKOTSE110#_<N_#XXW"
+"3P-JU#\\MU<)&:/OBO[G-<H'G-.L_HF]XW>)@XC\\MR/APP)[E/S'0@M/[[LX_,&4P=4<<\\+]EH^"
+"A'QM7_/_!*;S\\F)-N_+@WOUF[D[3^8+MDL3P_4/P@1KYDXJ/ _FI)RF9V0\\K_ P29HIN;EOVHO0"
+"^%^L^@_/@.\\2#7\\\\#_'G_%-CMKGO^>^-D;)3/8_E@EXW\"V9^K]#EN;@;)7YO[B\"N?OF>^J_V"
+"_L$^;ZW]C^1;S +93ODOPTF/DT%?>8_7^_6@&RDR3^\"OKKZG\"'Y/QT^UY%.\"/Z_ 06?_'#> , "
+"-5-S_T9#HOXY>'GQQ^-F_ O%6)/9=\\C_6[S715WGN/^%@773F*N:_BXS\\L+E^]+_0LS?R@@#BOY"
+"+.T+4M.O:_L/ VY/H>XS^GZ@WHZ%W6/WJ03GI8:_0_%Z^^$:;_J[\\^V)[0J,_TOW\\;1]9V\\\\,"
+"_PZ3*#B_CNK]UJG>14]7.OU8T\\ ?N\"^F_+SGW!1X(\\+^'#3\\3W/OWOQYEB0&>;/._D,(+M%KZ"
+"X;^8T#*R7,7QOY6LB7L%M/0_V>GH#]E!V[\\9VMOC41S?OX;[;10.]+R_?U*=K=1H]#\\^7&XJG]G"
+"#OPQ+\"A.2FN0_3KYXF&ZD][_WE\\T-9-+?OU'U0HW'[/:_'L29#)%GP+]E@U8M](>W/RGM\"+$G#"
+"_,_C_T;P)G!VC\\O-5V/E9CS/]=!__^'4@- DDFJ8T,>]3_=>C#<2M/KOZMZ/HYTYNL_R)9Q1Z]GY"
+"[]^#:3F .?(O_E'W=,\">>2_*Z:.-+%=VC_M*6EB/'.R/WQ\\QH:@.^>_K2[>8_&Y\\S^B^_2*KW7"
+"Q/[/(KJ2Y.?$_M^5X\\\\.>F;^S09SDMWWC/_P8Z9MH:O,_!&@=[ VJ\\+\\B'P]S;(FXO[IZ<E' "
+"FK*_-40< FQPXC\\!BL=*2\"?DO]?<32 &P?._'TG+=E#@W3^=,O \\:&+)/Y I&8+Q>OJ_ #F?99"
+"^0Y;\\,R#2<HU_I/Q7<*^M;/O0_5&CR(-ZLY;]KV/CU\"#CJOWD!MKO/Q.\"_9+7IB@EL]S]8H>:W"
+"##7;/[;7<[^G!O4_WK%A_.TM $ \\,+M$'.?@OX5?V!='Z.,_=PLLE$P%SS\\@TWS%U6;J/QO8B_I"
+" 9><_DYS@95FC]S\\M^E1O%V_G/YQJA,4ZL0/ Y3./LJ*?FS^N?X0C$B?F/U*?W(:EXLF_6%@ \\G"
+"H'Z#\\Y$@&OFR/\"OX:HXTO'*]^_ON]\\R%9QXK^;>GC0(8#4OR+4OD[+A>4_IB'T%=#$RK^2(C(D"
+"H]C-OWW2Q0!TR_D_5L-]8Z\\1Z3_@JW1]V>3C/]'F6#/4%< _FBAUIQ)T!L!\"-F]-GOCW/S\"-DT"
+"\\N .._J76N4%^1Z;\\TA?:!%Q< 0&?4]%0E@M<_B3*!VZZ!];_,$N2W1.;T/_SYT^G&[>(_/+P*@"
+"HI\"Y+^%2M51KI?Z/]].)#:ZJ>4_KO65E.3JO;\\?M^T I6#_OQTZQL*P. 9  X!F%H;C , \".$E"
+"GO)S\\OYK[\\U]J*^F_Q/N,FQNSV[]'QQHO0]/N/[P\\9I\\%G?6_P=#YMTDJ^C]B^<+N#1#T/W]7"
+"&L(?7NV_LSK4E/&NU[\\%J70F><[I/Y?P;SJ95+L_$\";>L/3\\U+_L+]&\\]TC OX;T21MA0>4_D"
+"@*ERUJ=!T#?QA.?AJ+>O\\%M&D;5._\"_9XQ/R&>WVC\\/H!C7YTO!/[VIZ;O3IO$_]='2%+,FX;"
+"\\X0$372<?MOWML\"#LSP^6_<OZB&*QA_S\\:,0_#NFOL/TN%E@V#^O@_+(-T\\?=BZ3_ZV9)[U@O"
+"9/_D8YOV#FLN_($ELV[]-L[\\:T^#RZXFL/T'86J\"!+O8_>S:4Q;#Z_;]$\\8*U,C4#0,&L.ID.="
+".Z_86]2C922N;^>V.@+TO3E/[$K(*\"/%03 L2L@H(\\5!,!&%T$DJ!7R/T87022H%?(_'Q:PNEQJ"
+"RC\\PD4P\";NKTOT%CGIVK&=P_#C389CERX#^CR_8\\T'GUO_.#Z.V\\?/:_[UI[EN!D D!%(\" M"
+"T!W2/Y9\">*>LD/$_C_,X\\ BC^C^;R3O@GO/6/Z_&8/;&+/&_KA(/(%I2W+_VK50_F0@ P/:M5#^"
+"9\" # ;&B]=D]^U#]L:+UV3W[4/^^&63[IRW _QB^<IS\"%@[^#U_@91SOWOZXJ8E8+7@! <BABEO"
+"CE\\C\\<CS*=V!;F/PW*=($8[<,_](CO(Q03WS\\3< (7R:CP/Q-/OD6'W?D_ PMPBJB[M#\\0@:G"
+";%;X!P'CR 3![0^\\_;MA=J,NM!,!S#3=2HL30O^*7,^31@>H_%U/?6\\5) T\"]\",5CG[W@/[7L"
+"+Z)J(-\"_]@2'(H&AT[_L;CTF/&W@OU/\"\"EB>D^4_&>'@X9J=T3\\0!&0L87'K/\\H1:J:+6O$_"
+"OTY\\AL>.X;]$-' /ZU#L/P#;I4Z<9/B_^R= UXGR[S]<-<4/JY?<OS%26TGIW.0_@ Z34DGOZ[^4"
+"\"SI/J=MZ/R1N]!J;3<$_W\\.PI]V]^[^M;O5DW%?+OVDWN%=V2.6_V:X1<D<<X3^A6#!3!>N_/^G"
+"#I\"@3Q<&_FB7X?9*=_C];043Q;0;R/]P/.L6=D^&_(*6GGBV)\\;] --LKQ)NP/R\"4698;8^0_K"
+".UY>0''ZS^U.8Y.+4#;OXFU<PQ'&;2_$K.XR?+9MC_?2///B%W@OPJE:JS=Q-\\_^3,,8%1Q][]Y'"
+"=HW5NCJOXM^(^ED-,R_9.ZZ XM[JK\\O%G:$AJ7PO[-9FR^9X_0_MC=X^\\++[+\\!YSEN3^K\"/["
+"KC% //P?6_SF1KF@35]+]HKM-8M>GK/\\LG0SI.,_P_<HC\"T4@)PC_,SCG%GN'Q/V]G?$A=:.<_9"
+"._@'\")<VK]P\\%D$>HFV/P^7&L,KM.^_MF&7:B\\M]3]5:.53?1_S/[GV3&& ^^Z_JUP+$\"][]#"
+"]GMWO*>5W-/ZLGV-9E/\\T_5O1(VH!JX3_M8++)68'M/Q9I&-5=7.^_B;JS,SM7U[_V?<!.Y [M/"
+"\\X\\ELT[W0# )5W)R76>Z;_V3Q^9^9/@/_JSZ1NU#.:_,)N\"<#QHVS_DONUR!./QOU^;X<6'G-R"
+"_T215CL*+T#_ ;.!F<S'1/TT\\6I6PAMD__M$RFE'.]C_GY>XF.^GO/QD1PS!]L^F_-5[.> :E[[^"
+"%1.FJLGGPOZ4LDR'H-<*_MK!GP@^:]S_6HQC_&-3>OQS=]UQ7++<_RHAIOOSSZC^ZEEG[M[7:/YC="
+"GD&\"-MB_Z3 Y6@<6_;_CO^I _[SQ/Q&Y/E*V0[L_(9,X1DN6VC]MK\\O9N+7=OWRM(5K.T<\\_'Q"
+"GBZA\\8]3^]R!\"QF1K[/R,8F%%EZM(_.')FJ$8#\\K_B9^F>8Q'N/_762DH.;NZ_.Z.?R)G9^S_$"
+"7>::;&7=ORVR\\>-=2]4_\"7-#ESIPYC]'2$BKH\\;=/U:*H\\?,&OB_Q[>U)\"Y^WK\\>RF/55X'"
+"3O\\\"7HC&9_> _5W2$@%1CW3^627-)VQ2V/V->#G&%']._U)K5A*ABYC]&AEW;YQOJ/\\.=;+%NM"
+">$_M$58D8V?^+^+<+Z-GU7K/\\W76V\\QPM6_Z+X@[2M-T#][:<I9$^/<O]:\\/M/R[]*_(Y#JLQZ"
+"=_;\\[ANT\":DWT/YBPT;-S=-Z_'X6!Q7DFY+\\L DE.4GKN/X7:-:EP;O$_6+0/L,<']S_A(1$J]"
+"'K$/VGF\\#-REN:_6U&%GJ*@]K]'TA.<ZMGW/T;$C)_WG?*_?:D@_ZX@Y+]8'(XC*ZW4/]QG >_4Q"
+"M4_WS#AA7^LP;\\;NS'IO;/:O]A%35/5D-\"_R@9(Y'L%GC]1.*H[?2''/U%/GPZ)-.._O-#0(#7^"
+"Q#^K4I C-OGY/Y((Z#.)*HL_!>;8X ,<\\3_.<;$Z6G\"_OU;L.58-L8B_B^;@Z1<HR#\\AL?^:3'"
+"?@/UWC;4:96-J_/7V A Q@T;_^]8A: 9[B/^AM9J_OC]._QO4TVW:PRS](S<+$:A?;/Q2T+$WNE>H"
+"_8 *;>^-ZS;](QVBLH4'</\\^ZR$=DPN\\_+]CF(QW/\\S^LX@P(&F7GO\\@9VUW#U@- ;?/%#+I1"
+"^C^KQ(/LZ'#DOYS< S4G&-B_M6@D?H^ Y[^SM16)G!__/]SD>8<T,^B_99)4=3GMXC_0Q;+P47W@O"
+"Z\\O0-;@$:X_UN7/\"@S@\\+^.APC=3EC!OW>)J*/$KN8_M,)(Y[4;[#\\K/T[WU2_8O_3:3W)0F]"
+"B_IT7(2O3Q ,!30HFA4G+IO^ *P&<2] % 56M?IA/&T;_*8-[Z+QGI/Y;\\C$><IK\\_9T-Y[?'^W"
+"[_90STX\"B#;/]BB]LIH_=N_XXTD'U,3PC\\I<_O+(_?(/T]]ZS+#UO&_%$#O6D70WK\\K%$0S[E'"
+"T/U1TCZDC7=4_ $038:5WYC];6L1_>?<!0$ D.A4AA.0_CKRSK39NZ+_()R8J7X'E/T\"FEK\"84="
+"0_A7XR/JD1PK^F902JMJ3@/W)KUHS.*M\\_S6'2L[P <[]<C\\X*<,WM/QS\\FH(S\\L0_$3@GGSZ"
+"A!T\"/PC8)S'/U/\\/8:E=O\\\\J_7=^,LHQZ\\[_0LZ7GO3+F/[@_-H4> ^*_P&T '_<2\\[^LYQ"
+"^+=GFWOR??ZG7G=.$_@)Z5/J ZT+_A96H<LN?P/RPVO\"\"D3Z _M9P0U>H=H#_3ASWE@T+(OZ,+S"
+"G 3*^:_O\"<#/7\\RL;]MK0W6=?;U/W(\\4V&Y5N\"_PPMDM6VL[S^T .LSJO?IOYZZ35=84L,_.?"
+"\"DL<ORVS\\([//I'I[D/PW+: 1@WM._J%?VRRFDU+^5NG=5;K/4/Q(C2'LHROZ_L'+Y#2I?][\\W"
+"G\\0'YZ[9OQ\"Z\\G^^0K^_)HX!=6JAZ#\\7],^'UP;\\/[>T F'!\\+,_YJ???H^&\\[^+V6>^-["
+",!P-Y+4CC?U.&_H =K5QO^]#^(K4LD*3#AO]Y\"%VI7-<,_;!22?DIWZ3^Z4]-KQ#C\"/P5T3'TQB"
+"M^_(HOV5K<1Y3\\5E.,!*:GVOW\"T+RF\"/[D_E\\JX3/AS[C^XE-++9!37/^;^B6L\\D_$_>JZY+"
+".KFY3\\&KMGZ!*'J/\\7PUT@U@?2_-+.C+@Y*XS]6D-0^Z(3D/QE8W$$\"RK^_K!AN?@@-Y+^T6$;"
+"?D,G4OQ V7$6@ALX_BJ.$0DM)M+_OE5TE!CCDO[]73A5:@O(_W2;D0S97RC\\1X<FMJ,/EOW HUR("
+"GTY^_WT^4C%T9!<![^\":F=N_&OV!OG.+X^-\\_ZA#I9;&.[K_%2:-+E6;BOXGG\\,T[9=L_.B&'("
+"N(PV[_()NDX6U70/\\JZT?^8V^&_3TYY6VG,V+]#(IVOS4+W/RD^O\"RQ[NZ__0EX@_NAR#_4O ^/"
+"Z2VTOV5MS<5'[M\"_?^LT9;/_Z+^ QPW%L)'NOUW >'U.<NJ_4G_P' :\\]S_KF]8[>T3FOWITZF["
+"6YL&_2CXMJ7\\[\\3\\R/R<[INO8O[N;5#5LP>T_C*)R .E!PK_5[ P];DGVO_Q)2L$)7O\"_5:BY"
+"&%L]O#^[#0F?XG;NOQ$;KYB>;.0_+X9'4\"?!^[\\;?(:(*\";4/_D\"<1#-G^&_RS\"-:;48Z[]+"
+".RL45XG1O^/OS#.Y1O<_]P8I)M\"N[;_J$[[P-13R/WNUEL_)%NB_BV-.<KGFQS]^4[KBM^3EOZ#^"
+"#D4<&WN_%;1IZD%(]S__N$\\<E&KNOY= 1O21(=T_,;+\\8V3 [+\\ LN.<]Y#JO\\Y\\7QA.C>B_"
+"JX/=<X<(V#_4TT*.7_K9OWZALT)2W\\._G$/H!*R6_#\\8/E@QXA;B/])>R.!/)-(_ A%$WZ 3[+"
+"\\&:SE Y5GSOX4D4U>C0YB_W1ELWIC,\\+\\#;5PGJ./I/TM;O%Z9$.,_(9#.?^.#PS\\L#HC4N.7"
+"6/PL-/#C_(JH_6=5;5%^TY;]?K& E5'O+/ZR<K!=J-CT_=!M/%SD=]+\\MD)=_3+SB/R?E9UW=V-8"
+"_U]*,D2J4S;^0ST1(EA;C/PW@P1G7)NR_*ZU9)+&7\\#]/=-O-O0K9O]@6O#YM8.8_P4\\3 +T=Y#"
+"\\NQ K 5Y\"6/VRW3VZM3O\"_XCL;D B*Z3^^W!,-&Y+KO]B3!@67Q>L_7DS(1'9^\\;]#(-?1 \""
+"':OS\"TNSXBS>J_ ) ;)=_=XK]_PRT&H/'T/TB%>N%Y3@- H>Q-?H@!XK\\VW-!G@L3YOU1P\\ Y2"
+"K]8__E23-5AQY3]&AV[48E?DOZ(H6N\\#UNF_%;4R;&VFS3]2<3Y@.$3S/YDW*';IRO.__(P+[S5$"
+"N[\\-$@M@-=[JO[1\\XA0'Z.@_1F$GE,B5V3_E4QB8EO7<O^8&XU&YX^L_M7N>)H=7!D#[TYT.O=["
+"0O_T9&$= H=^_IQ=XWU,:\\3_8T_)R1/?EO^W2/I. ==P_;\\Y\"76CNX#^?/ 1U\"LG3/Y(/U0C2"
+"/>V_5.W<C0E#Z;^8MO0#_QW4OZ%L0J\\9TN\\_SM7I_=91]K\\9PA.2*B($P()_B>7*J^\\_QV 0K"
+":@)];].<W1-K.3DO]&LR_ <=^V_O:!O\\Y=)VC\\X@^E1IG'CO^GN?(86HN __I23^T$CW+\\Q<.E"
+"=R3'?/X4E=U89RO>_+$W.N1]@]#__H09 $P36OPQP2Q0,O\\(_7)[,$H<D]#\\M?0T%HDSA/Z2V9-"
+"0SV]8_1<T]_^&>\\;\\P))?$[;WSOZZ09G3#G.4_8EN.:3+R\\K\\=5\" !LK?@OY;=^^Z0L.,_@="
+"08RV2L[K];'W9>NO33O]'S:8RMWLL__ ='[FM#=C\\=K$'L$YGC/_W15PSNRN*_,UHOT!1+!4#L5L"
+"F[J/?:O_!1PCG*Z.L_4N58T(>!]C\\FBFU2QNOL/V/=9F1O7J\"_^_^EG=TYXK^IAW!LUH^U/W(-4"
+"N@N>?(_5(&DT=XQL[\\9!<-U1H_B/PL#8+VKK=>_X/-1B[%I^S_N>H0N;,;PORZN'-= O>2_+\\$E"
+"RJ+ZT[\\AG=&!7^/I/[05YL\\B9.T_ *TYTQ3[U;_=S]3K VWAOR$SIV[$G@' 04/!JR<:Y;\\2\\"
+"L47ET#1/VB:ZM-D#LN_ $2PF-*2\\S^MBYG!# CF/S)@7P!??Z^_LWE^5,%TZ+^#]PP*L+?R/T5?$"
+":-/D?Z_?VZ[T@85VC^>I'):KP+(OYSX_T#&?_X_>##$V[4 Z;][7G]FX!SV/S9VAW< 1=B_5[$S$/"
+"X\\Y+_1EM(O6A[TOZO2,$;Z N>_1IK1)+%;Z+]M6JYK.[OG/XRB:G8X8N\\_)!-[]B38]C^G-L:&7"
+"Y'H/]VNYGT)_?8_Y5,^;<'7H+^N%0G)?*3M/[C.KM?C;-H_?AL\\B BVPK_C)R+E51?Z/SK>[7#74"
+"/(_ZP1M\\GQE]K\\G=FF9D*WD/X)S!\\(R0^8_;;[6.9 ,S#_L^.\\^N+?4OP>=KS >+_R_8[:18%"
+"D&H[\\C5T^ST$/9/QE*ZU7]4]6_(M\\\"J&<_ZC^Q(CRI3<S?OX:ZO3JU&_0_$FZ-?\"\"APS^LK,"
+"TQJ_CM/ZZ@YZS(G.V_(K5A-0H_[[\\CQ=(-D_[AOPIT'+3NHM>_DI95Y!CAU[\\7AU!%UX#OOP>QN"
+"],#I< _;!_X.&N ]+^J1?3V<)3S/X%8\\O:JB^0_83?0;KI0ZC_D,Z$>6+;COQ0]V$R)^NZ_/S4J>"
+"_[;Y3^<-%^M3^_K/Z@JKM\\1R_&_1-B&9F[W]#]*%3E,NL[0OV>O>&&Q,9F_*AZ%Y[H^U#]?$GR4R"
+"%;8/[JS*J&CK.H_MU$^/)D1YS_^8$RV#U#:/UI4VBYN4N>_E3V#< <$T;_X9Q;O_+[6/YJ4*DZ_7"
+"\\2_(#4E6B:&]K\\Y0H6?/^/JO[W'9^VDS\\(_'#$12Y23ZK^5-LU89%  0#! M=0*3N2_,7VTTSP"
+"%][^V\"#$T3*7SOV%,!'LK*>8_WC-<>5_\\\\;_P99>+'PZ?/XQ8-DZ&F?,_A%+@&94(S[]R5:_L#"
+"VKOOVEJLM\\8 O$_\"G*^;3BBY#^)HVCEG3< 0,<[Z(U\"WOV_I_B,S!-MXS^TU32>[\\G@O^)X]4"
+"GH#M:_B--1XD\"RO3]I.3SCR=[9/X\\&;ZV900- IR*>9(F5];^G*TU+E@SSOT9;6ELY'N4_Y&\">"
+";=[SXC\\/UHCBP8+PO]42W-_$R_F_J\\V]UE9\\Y[_Q-'&P8U_AOS?*6%,!],P__\\J <K5YX3_*<"
+"[LK-KW/OP&A-KT.5>L__=')11E^[K^;:558,7#GOQ4@(5O\"G]<_)FG%?O8;Y;];HQBP\":6QOZ*Q"
+"2GH]J]H_+&)TTX#A_C^F(A^5VY/Z/Z\\-'C]<IOV_]2'WI=7M\\K\\%@E[4!:74/R)L*+->(<L_'+"
+"T4YGY@[[^:8;NW3Q&E/YX[ 4_P9)P_IIHI96UHI+^3;\\#R*?7HOS:X0USK/N:_S,0\"97<LNS_DJ"
+"[_26A\"Z/ZS(8+QQG*<_=^)0,VS3J#\\<\\1)E1H_NO[LGP=K[=<T_ H+$ZN9O_K]V436IXU[I/W("
+" S4Q&Y9:_L%!3B7RCW+]349]CB\\L 0 BL\\(=E[^V_QK'R[!J[]#]8$8U8A\\W)OY,CM+5E<OV_U"
+"!Z+,)\"\"\\;];D*7^N>?AOXBR@=DND\\H_5TT<-AO@T[^48<;JM>GJ/Y%RI<259^0_-CQEHGK\"I"
+"3_I<AI\" -[7/U&^GG/-T>6_^YT!29-XH[\\+I^!.,U/@/V'L:Q/O0<J_P0>XX-O4\\;\\'LRX31!"
+"MXO\\7DR7OX]->_TA\"J\\:V2X;_[LIG;4%_WO^\"*'?U6@>B_SIV/UX !SC](<^:EF*4\"0(J.:6"
+";1UO*_*-5S2%Z.W[\\T]Y ^AVB7OZ8(50FM!K\"_CV(.B8$Q\\3\\X_\\-&RDO4/T\"U*HJK^N^_W"
+"W'!T,\" _S^4AU!F24O7OX(\"F_,.EK\"_C?\"&AB7!V+]$&U.$$GCBO]2\\6[8M+:(_#COCFK6'Y"
+"+].'T>196'D/RT4^J'QL/._[!HG.O F^[\\O3?AB@@G?/V0]K0]IJ0= DE!4/]XMUK\\:Y6M=O<OA"
+"OS1;#I_^S\\T_P5?4/I>UX#]%!&X%2H3QOW*$L3RX-UP_5,*XT#ODY+\\>8AE(R0GCOUAF.&M@Z+X"
+"_\\P2K9U<$^C_T#E+&0WS8O_2 9#U?\"^6_L@\\U*']4PC]-?!5C/@/;OYSR:B(E0^H_]M)Q'=--["
+"S],GK^(TZL(P.4GU8[DP^@_?E\";\"L*LTC_*,TDLJFWZ/VP;5@MY,@O #X8/(9^/T+],3%-&XSCQ"
+"OVT?/925L-V_^U7<2>^UW+]*P*W;U/7M/U<W?OT@/]^_62[=X6 8XS^Z VVGOTX!0.0YJTVCU/H_^"
+"\\B2?F2HOK_$&#][JB/A/_5WVX,E?_D_#4N,/@+[\\;\\ :+^>@Q3POUATBRHDI>*_$CDNKG;9V;^"
+"NX;Q/ SO'OQ66/(*)4/*_W<\"E9>?^X;_)Y332,3;3/XH?.VK&#] _LG^9XL\"I\\;]@FR\"\\P_/"
+"E/T^LW)H&WNX_E!23,G/D[[_TQ1Z.'(CO/^!)_QP@5,\"_[CH</#3:LC_[B_)+=HWIORK_RKNVR^2"
+"_<?)%VX/Y]#\\FI>/DM'+V/]L5@5 ]U # 51Z3,VO6\\;\\%3EAN>O+\"O^$/MN,(O>H_.@9+LU=1"
+"\\C]9J&H<X6+>/_PV&,:G.=2_4#[9J%S*_C_N,\"%9W''G/X(<BA&/#^ _K%$T'OT9U;^J;F5&4?W"
+"//W\\3#M.&[O*_WT(?.4T1[+]57%WNO_3P/X^RTDV!R>*_X>7O]%UV^C_$+KC@*@C7/\\+[BPZP+N"
+"0_0X&4)1V/Y;^D#P)'7KOF/X4?_EPTJ.0_9(!)W7LRZ#\\+VZKE'!?R/ZU30O/_^>N_(-R5W7/1Z;"
+"\\ P#'GM8R.OV6OSR-:\"/ _.<.R]9DCW;]NP@QL+=^XO\\-?+S&/8>D_Q<ZEJ W/\\K_GJ255Q_["
+"U/W$]6@HN))X_O6>+L[+K^;]H )?3I6K9OYD\"&/-@'I>_0KHS+S:G<C^ L*@(#:WBOZ56:+G1)^("
+"_]P:46D+AVC_U@&D8HWC7OUF7,28F;. _^D^ !=C7^C]'0D+!*V3@OPG'LKV^^M\\_K9CVB=2\"Y#"
+"]0JM'CML;>/P+9(5ZN'^P_I\"D.V^@S\\;^E?W;\\S'_?OY+&]2$-:_:_OT)Y('R\" 4!OX:=A6B7"
+"./[N,4\"9>?O4_E??)63CEWK\\_PMB\\N,3*/Z'*7%!1&/J_U8H1,964Y;\\F3308^ZSAOU'U87N7"
+"U^$_]#>A53IA=;^@>UR/:,32/\\T>?\"!!8=:_]U[6%A\"9R[\\0HU3]L>F9OV(RU\\8_E.$_STBP"
+"[;JQW3]'>$ZLD]O2/UYFT\"Y23,>_49WW5GVRM+]P%W<Z$*/TOQT@.\"PK'^:_G*^=! X>^[^G\"O"
+")E?WK.OV4<+\\DV!NF_>N&M^=5CY[^]$F ,S SSO\\.F\\,R.3 % 4R7()YZRX+]^DHM:O<#RO[0<"
+":^A$CNH_.J&U\\C,@T+]G19>C!8;A/]>RO&/2D-\"__;P]>QR^TK\\K3?3=_%KCOR,C+XDT;.^_TK"
+"G';U_NZ;^].*8-@2/POQ\\L2\"J\"&O>_XUM3JG>0^#_): \\E:3+U/Q^ B?H :_*_YJ%<VGT)[3^"
+"%#;\\;>D2X/]#?9.P0*. _2.?^2R;@UC\\I03-UV8ZZO]85O/;>'? _PHRY05;3W+\\SZ>!#'.#8O"
+"SRAQ_2\\!/*_A'++_\"U_ZC^HO*C9\":WV/^Y%Y$ 4G_,_WY>I+6W]F[\\*URG59T3S/Y7458@V4."
+"L_1%[3'<*%WC_N#?18TSCOOV5%#-:U0/F_D?C&&Z=%U+_Q]3M(Q]O3/\\N[2@G:-^H_:6?%+L\"QO"
+";\\51],(L0_S/TNN$O5GUO$_P2J0DBT=[C^UIL2D1T32O[A3\\U*(3[L_#@   #@    &    \"  "
+"   8         !0    @    !     0    $         \"0    @               X    X   "
+" !@    @    &          4    (     0    $    !          D    (               ."
+"    ,     8    (    !@         %    \"                0         )          X "
+"   P    !@    @    &          4    (               !          D         #@   "
+"$@    &    \"     8         !0    @    !     P    $         \"0   !@   #8@7-&"
+"E/;F/P          V(%S1I3VYC\\.    ,     8    (    !          %    \"     $    "
+"!     0         0  $ +0    X    X    !@    @    &          4    (     0    $ "
+"   !          D    (            ^#\\.    .     8    (    !          %    \"  "
+"   $    %     0         0    !0   $YO:7-E    #@   #@    &    \"     8        "
+" !0    @    !     0    $         \"0    @           #P/PX   #('P  !@    @    "
+"!          4    (     0    $    !          X   \"8'P  !@    @    &          4"
+"    (     0   .T#   !          D   !H'P            ![%*Y'X7J$/WL4KD?A>I0_N!Z%"
+"ZU&XGC][%*Y'X7JD/YJ9F9F9F:D_N!Z%ZU&XKC_L4;@>A>NQ/WL4KD?A>K0_\"M>C<#T*MS^:F9F9"
+"F9FY/RE<C\\+U*+P_N!Z%ZU&XOC^D<#T*UZ/ /^Q1N!Z%Z\\$_,S,S,S,SPS][%*Y'X7K$/\\/U*%"
+"R/PL4_\"M>C<#T*QS]2N!Z%ZU'(/YJ9F9F9F<D_X7H4KD?ARC\\I7(_\"]2C,/W$]\"M>C<,T_N!Z"
+"%ZU&XSC\\       #0/Z1P/0K7H] _2.%Z%*Y'T3_L4;@>A>O1/X_\"]2A<C](_,S,S,S,STS_7HW"
+" ]\"M?3/WL4KD?A>M0_'X7K4;@>U3_#]2A<C\\+5/V=F9F9F9M8_\"M>C<#T*US^N1^%Z%*[7/U*X"
+"'H7K4=@_]BA<C\\+UV#^:F9F9F9G9/SX*UZ-P/=H_X7H4KD?AVC^%ZU&X'H7;/RE<C\\+U*-P_S<S"
+",S,S,W#]Q/0K7HW#=/Q6N1^%Z%-X_N!Z%ZU&XWC]<C\\+U*%S?/P       . _4K@>A>M1X#^D<#T"
+"*UZ/@/_8H7(_\"]> _2.%Z%*Y'X3^:F9F9F9GA/^Q1N!Z%Z^$_/@K7HW ]XC^/PO4H7(_B/^%Z%*Y"
+"'X>(_,S,S,S,SXS^%ZU&X'H7C/]>C<#T*U^,_*5R/PO4HY#][%*Y'X7KD/\\W,S,S,S.0_'X7K4;@"
+">Y3]Q/0K7HW#E/\\/U*%R/PN4_%:Y'X7H4YC]G9F9F9F;F/[@>A>M1N.8_\"M>C<#T*YS]<C\\+U*"
+"%SG/ZY'X7H4KN<_        Z#]2N!Z%ZU'H/Z1P/0K7H^@_]BA<C\\+UZ#](X7H4KD?I/YJ9F9F9F"
+">D_[%&X'H7KZ3\\^\"M>C<#WJ/Y#\"]2A<C^H_X7H4KD?AZC\\S,S,S,S/K/X7K4;@>A>L_UZ-P/0"
+"K7ZS\\I7(_\"]2CL/WL4KD?A>NP_S<S,S,S,[#\\?A>M1N![M/W$]\"M>C<.T_P_4H7(_\"[3\\5K"
+"D?A>A3N/V=F9F9F9NX_N!Z%ZU&X[C\\*UZ-P/0KO/UR/PO4H7.\\_KD?A>A2N[S\\       #P/RE"
+"<C\\+U*/ _4K@>A>M1\\#][%*Y'X7KP/Z1P/0K7H_ _S<S,S,S,\\#_V*%R/PO7P/Q^%ZU&X'O$_2"
+".%Z%*Y'\\3]Q/0K7HW#Q/YJ9F9F9F?$_P_4H7(_\"\\3_L4;@>A>OQ/Q6N1^%Z%/(_/@K7HW ]\\C"
+"]G9F9F9F;R/X_\"]2A<C_(_N!Z%ZU&X\\C_A>A2N1^'R/PK7HW ]\"O,_,S,S,S,S\\S]<C\\+U*%"
+"SS/X7K4;@>A?,_KD?A>A2N\\S_7HW ]\"M?S/P       /0_*5R/PO4H]#]2N!Z%ZU'T/WL4KD?A>"
+"O0_I' ]\"M>C]#_-S,S,S,ST/_8H7(_\"]?0_'X7K4;@>]3](X7H4KD?U/W$]\"M>C</4_FIF9F9F"
+"9]3_#]2A<C\\+U/^Q1N!Z%Z_4_%:Y'X7H4]C\\^\"M>C<#WV/V=F9F9F9O8_C\\+U*%R/]C^X'H7K"
+"4;CV/^%Z%*Y'X?8_\"M>C<#T*]S\\S,S,S,S/W/UR/PO4H7/<_A>M1N!Z%]S^N1^%Z%*[W/]>C<#T"
+"*U_<_        ^#\\I7(_\"]2CX/U*X'H7K4?@_>Q2N1^%Z^#^D<#T*UZ/X/\\W,S,S,S/@_]BA<C"
+"\\+U^#\\?A>M1N![Y/TCA>A2N1_D_<3T*UZ-P^3^:F9F9F9GY/\\/U*%R/POD_[%&X'H7K^3\\5KD"
+"?A>A3Z/SX*UZ-P/?H_9V9F9F9F^C^0PO4H7(_Z/[@>A>M1N/H_X7H4KD?A^C\\*UZ-P/0K[/S,S,S"
+",S,_L_7(_\"]2A<^S^%ZU&X'H7[/ZY'X7H4KOL_UZ-P/0K7^S\\       #\\/RE<C\\+U*/P_4K@"
+">A>M1_#][%*Y'X7K\\/Z1P/0K7H_P_S<S,S,S,_#_V*%R/PO7\\/Q^%ZU&X'OT_'X7K4;@>_3](X7"
+"H4KD?]/TCA>A2N1_T_<3T*UZ-P_3^:F9F9F9G]/\\/U*%R/POT_[%&X'H7K_3\\5KD?A>A3^/SX*U"
+"Z-P/?X_9V9F9F9F_C^0PO4H7(_^/[@>A>M1N/X_X7H4KD?A_C\\*UZ-P/0K_/S,S,S,S,_\\_7(_"
+"\"]2A<_S^%ZU&X'H7_/X7K4;@>A?\\_KD?A>A2N_S^N1^%Z%*[_/]>C<#T*U_\\_         $ 5K"
+"D?A>A0 0\"E<C\\+U* ! /@K7HW ] $!2N!Z%ZU$ 0&9F9F9F9@! >Q2N1^%Z $\"/PO4H7(\\ 0*"
+"1P/0K7HP! N!Z%ZU&X $#-S,S,S,P 0.%Z%*Y'X0! ]BA<C\\+U $ *UZ-P/0H!0!^%ZU&X'@% ,S"
+",S,S,S 4!(X7H4KD<!0%R/PO4H7 % <3T*UZ-P 4\"%ZU&X'H4!0)J9F9F9F0% KD?A>A2N 4##]2"
+"A<C\\(!0->C<#T*UP% [%&X'H7K 4         \"0!6N1^%Z% ) *5R/PO4H D ^\"M>C<#T\"0%*"
+"X'H7K40) 9V9F9F9F D![%*Y'X7H\"0(_\"]2A<CP) I' ]\"M>C D\"X'H7K4;@\"0,W,S,S,S )"
+" X7H4KD?A D#V*%R/PO4\"0 K7HW ]\"@- 'X7K4;@> T S,S,S,S,#0$CA>A2N1P- 7(_\"]2A< "
+"T!Q/0K7HW #0(7K4;@>A0- FIF9F9F9 T\"N1^%Z%*X#0,/U*%R/P@- UZ-P/0K7 T#L4;@>A>L#0"
+"         1 %:Y'X7H4!$ I7(_\"]2@$0#X*UZ-P/01 4K@>A>M1!$!G9F9F9F8$0'L4KD?A>@1 C"
+"\\+U*%R/!$\"D<#T*UZ,$0+@>A>M1N 1 S<S,S,S,!$#A>A2N1^$$0/8H7(_\"]01 \"M>C<#T*!4"
+" ?A>M1N!X%0#,S,S,S,P5 2.%Z%*Y'!4!<C\\+U*%P%0'$]\"M>C< 5 A>M1N!Z%!4\":F9F9F9D%"
+"0*Y'X7H4K@5 P_4H7(_\"!4#7HW ]\"M<%0.Q1N!Z%ZP5         !D 5KD?A>A0&0\"E<C\\+U*"
+" 9 /@K7HW ]!D!2N!Z%ZU$&0&=F9F9F9@9 >Q2N1^%Z!D\"/PO4H7(\\&0*1P/0K7HP9 N!Z%ZU&X"
+"!D#-S,S,S,P&0.%Z%*Y'X09 ]BA<C\\+U!D *UZ-P/0H'0!^%ZU&X'@= ,S,S,S,S!T!(X7H4KD<'"
+"0%R/PO4H7 = <3T*UZ-P!T\"%ZU&X'H4'0)J9F9F9F0= KD?A>A2N!T##]2A<C\\('0->C<#T*UP="
+" [%&X'H7K!T         (0!6N1^%Z% A *5R/PO4H\"$ ^\"M>C<#T(0%*X'H7K40A 9V9F9F9F\""
+"$![%*Y'X7H(0)#\"]2A<CPA I' ]\"M>C\"$\"X'H7K4;@(0,W,S,S,S A X7H4KD?A\"$#V*%R/P"
+"O4(0 K7HW ]\"@E 'X7K4;@>\"4 S,S,S,S,)0$CA>A2N1PE 7(_\"]2A<\"4!Q/0K7HW )0(7K4;"
+"@>A0E FIF9F9F9\"4\"N1^%Z%*X)0,/U*%R/P@E UZ-P/0K7\"4#L4;@>A>L)0         I %:Y'"
+"X7H4\"D I7(_\"]2@*0#X*UZ-P/0I 4K@>A>M1\"D!G9F9F9F8*0'L4KD?A>@I D,+U*%R/\"D\"D"
+"<#T*UZ,*0+@>A>M1N I S<S,S,S,\"D#A>A2N1^$*0/8H7(_\"]0I \"M>C<#T*\"T ?A>M1N!X+0"
+"#,S,S,S,PM 2.%Z%*Y'\"T!<C\\+U*%P+0'$]\"M>C< M A>M1N!Z%\"T\":F9F9F9D+0*Y'X7H4K"
+"@M P_4H7(_\"\"T#7HW ]\"M<+0.Q1N!Z%ZPM         #$ 5KD?A>A0,0\"E<C\\+U* Q /@K7H"
+"W ]#$!2N!Z%ZU$,0&=F9F9F9@Q >Q2N1^%Z#$\"0PO4H7(\\,0*1P/0K7HPQ N!Z%ZU&X#$#-S,S,"
+"S,P,0.%Z%*Y'X0Q ]BA<C\\+U#$ *UZ-P/0H-0!^%ZU&X'@U ,S,S,S,S#4!(X7H4KD<-0%R/PO4H"
+"7 U <3T*UZ-P#4\"%ZU&X'H4-0)J9F9F9F0U KD?A>A2N#4##]2A<C\\(-0->C<#T*UPU [%&X'H7"
+"K#4         .0!6N1^%Z% Y *5R/PO4H#D ^\"M>C<#T.0%*X'H7K40Y 9V9F9F9F#D![%*Y'X7H"
+".0)#\"]2A<CPY I' ]\"M>C#D\"X'H7K4;@.0,W,S,S,S Y X7H4KD?A#D#V*%R/PO4.0 K7HW ]"
+"\"@] 'X7K4;@>#T S,S,S,S,/0$CA>A2N1P] 7(_\"]2A<#T!Q/0K7HW /0(7K4;@>A0] FIF9F9F"
+"9#T\"N1^%Z%*X/0,/U*%R/P@] UZ-P/0K7#T#L4;@>A>L/0        !! \"M>C<#T*$$ 5KD?A>A"
+"000!^%ZU&X'A! *5R/PO4H$$ S,S,S,S,00#X*UZ-P/1! 2.%Z%*Y'$$!2N!Z%ZU$00%R/PO4H7!!"
+" 9F9F9F9F$$!Q/0K7HW 00'L4KD?A>A! A>M1N!Z%$$\"/PO4H7(\\00)J9F9F9F1! I' ]\"M>C$"
+"$\"N1^%Z%*X00+@>A>M1N!! P_4H7(_\"$$#-S,S,S,P00->C<#T*UQ! X7H4KD?A$$#L4;@>A>L0"
+"0/8H7(_\"]1!         $4 *UZ-P/0H10!6N1^%Z%!% 'X7K4;@>$4 I7(_\"]2@10#,S,S,S,Q%"
+" /@K7HW ]$4!(X7H4KD<10%*X'H7K41% 7(_\"]2A<$4!G9F9F9F810'$]\"M>C<!% >Q2N1^%Z$4"
+"\"%ZU&X'H410(_\"]2A<CQ% FIF9F9F9$4\"D<#T*UZ,10*Y'X7H4KA% N!Z%ZU&X$4##]2A<C\\("
+"10,W,S,S,S!% UZ-P/0K7$4#A>A2N1^$10.Q1N!Z%ZQ% ]BA<C\\+U$4         20 K7HW ]\"A"
+") %:Y'X7H4$D ?A>M1N!X20\"E<C\\+U*!) ,S,S,S,S$D ^\"M>C<#T20$CA>A2N1Q) 4K@>A>M1"
+"$D!<C\\+U*%P20&=F9F9F9A) <3T*UZ-P$D![%*Y'X7H20(7K4;@>A1) C\\+U*%R/$D\":F9F9F9"
+"D20*1P/0K7HQ) KD?A>A2N$D\"X'H7K4;@20,/U*%R/PA) S<S,S,S,$D#7HW ]\"M<20.%Z%*Y'X"
+"1) [%&X'H7K$D#V*%R/PO420        !- \"M>C<#T*$T 5KD?A>A030!^%ZU&X'A- *5R/PO4H$"
+"T S,S,S,S,30#X*UZ-P/1- 2.%Z%*Y'$T!2N!Z%ZU$30%R/PO4H7!- 9V9F9F9F$T!Q/0K7HW 30'"
+"L4KD?A>A- A>M1N!Z%$T\"/PO4H7(\\30)J9F9F9F1- I' ]\"M>C$T\"N1^%Z%*X30+@>A>M1N!-"
+" P_4H7(_\"$T#-S,S,S,P30->C<#T*UQ- X7H4KD?A$T#L4;@>A>L30/8H7(_\"]1-         %$"
+" *UZ-P/0H40!2N1^%Z%!1 'X7K4;@>%$ I7(_\"]2@40#,S,S,S,Q1 /0K7HW ]%$!(X7H4KD<40%"
+"*X'H7K411 7(_\"]2A<%$!F9F9F9F840'$]\"M>C<!1 >Q2N1^%Z%$\"%ZU&X'H440(_\"]2A<CQ1"
+" F9F9F9F9%$\"D<#T*UZ,40*Y'X7H4KA1 N!Z%ZU&X%$#\"]2A<C\\(40,W,S,S,S!1 UZ-P/0K7%"
+"$#A>A2N1^$40.M1N!Z%ZQ1 ]BA<C\\+U%$         50 K7HW ]\"A5 %*Y'X7H4%4 ?A>M1N!X5"
+"0\"E<C\\+U*!5 ,S,S,S,S%4 ]\"M>C<#T50$CA>A2N1Q5 4K@>A>M1%4!<C\\+U*%P50&9F9F9F9"
+"A5 <3T*UZ-P%4![%*Y'X7H50(7K4;@>A15 C\\+U*%R/%4\"9F9F9F9D50*1P/0K7HQ5 KD?A>A2N"
+"%4\"X'H7K4;@50,+U*%R/PA5 S<S,S,S,%4#7HW ]\"M<50.%Z%*Y'X15 ZU&X'H7K%4#V*%R/PO4"
+"50        !9 \"M>C<#T*%D 4KD?A>A060!^%ZU&X'A9 *5R/PO4H%D S,S,S,S,60#T*UZ-P/19"
+" 2.%Z%*Y'%D!2N!Z%ZU$60%R/PO4H7!9 9F9F9F9F%D!Q/0K7HW 60'L4KD?A>A9 A>M1N!Z%%D\""
+"/PO4H7(\\60)F9F9F9F19 I' ]\"M>C%D\"N1^%Z%*X60+@>A>M1N!9 PO4H7(_\"%D#-S,S,S,P6"
+"0->C<#T*UQ9 X7H4KD?A%D#K4;@>A>L60/8H7(_\"]19         %T *UZ-P/0H70!2N1^%Z%!= "
+"'X7K4;@>%T I7(_\"]2@70#,S,S,S,Q= /0K7HW ]%T!(X7H4KD<70%*X'H7K41= 7(_\"]2A<%T!"
+"F9F9F9F870'$]\"M>C<!= >Q2N1^%Z%T\"%ZU&X'H470(_\"]2A<CQ= FIF9F9F9%T\"D<#T*UZ,7"
+"0*Y'X7H4KA= N!Z%ZU&X%T#\"]2A<C\\(70,W,S,S,S!= UZ-P/0K7%T#A>A2N1^$70.M1N!Z%ZQ="
+" ]BA<C\\+U%T         80 K7HW ]\"AA %*Y'X7H4&$ >A>M1N!X80\"E<C\\+U*!A ,S,S,S,S"
+"&$ ^\"M>C<#T80$CA>A2N1QA 4K@>A>M1&$!<C\\+U*%P80&9F9F9F9AA <#T*UZ-P&$![%*Y'X7H"
+"80(7K4;@>A1A D,+U*%R/&$\":F9F9F9D80*1P/0K7HQA KD?A>A2N&$\"X'H7K4;@80,+U*%R/PA"
+"A S,S,S,S,&$#7HW ]\"M<80.%Z%*Y'X1A [%&X'H7K&$#V*%R/PO480        !E \"M>C<#T*&"
+"4 4KD?A>A090!Z%ZU&X'AE *5R/PO4H&4 S,S,S,S,90#X*UZ-P/1E 2.%Z%*Y'&4!2N!Z%ZU$90%"
+"R/PO4H7!E 9F9F9F9F&4!P/0K7HW 90'L4KD?A>AE A>M1N!Z%&4\"0PO4H7(\\90)J9F9F9F1E I"
+"' ]\"M>C&4\"N1^%Z%*X90+@>A>M1N!E PO4H7(_\"&4#,S,S,S,P90->C<#T*UQE X7H4KD?A&4#"
+"L4;@>A>L90/8H7(_\"]1E         &D *UZ-P/0H:0!2N1^%Z%!I 'H7K4;@>&D I7(_\"]2@:0#"
+",S,S,S,QI /@K7HW ]&D!(X7H4KD<:0%*X'H7K41I 7(_\"]2A<&D!F9F9F9F8:0' ]\"M>C<!I >"
+"Q2N1^%Z&D\"%ZU&X'H4:0)#\"]2A<CQI FIF9F9F9&D\"D<#T*UZ,:0*Y'X7H4KAI N!Z%ZU&X&D#"
+"\"]2A<C\\(:0,S,S,S,S!I UZ-P/0K7&D#A>A2N1^$:0.Q1N!Z%ZQI ]BA<C\\+U&D         ;0"
+" K7HW ]\"AM %*Y'X7H4&T >A>M1N!X;0\"E<C\\+U*!M ,S,S,S,S&T ^\"M>C<#T;0$CA>A2N1Q"
+"M 4K@>A>M1&T!<C\\+U*%P;0&9F9F9F9AM <#T*UZ-P&T![%*Y'X7H;0(7K4;@>A1M D,+U*%R/&T"
+"\":F9F9F9D;0*1P/0K7HQM KD?A>A2N&T\"X'H7K4;@;0,+U*%R/PAM S,S,S,S,&T#7HW ]\"M<;"
+"0.%Z%*Y'X1M [%&X'H7K&T#V*%R/PO4;0        !Q \"M>C<#T*'$ 4KD?A>A0<0!Z%ZU&X'AQ "
+"*5R/PO4H'$ S,S,S,S,<0#X*UZ-P/1Q 2.%Z%*Y''$!2N!Z%ZU$<0%R/PO4H7!Q 9F9F9F9F'$!P/"
+"0K7HW <0'L4KD?A>AQ A>M1N!Z%'$\"0PO4H7(\\<0)J9F9F9F1Q I' ]\"M>C'$\"N1^%Z%*X<0+"
+"@>A>M1N!Q PO4H7(_\"'$#,S,S,S,P<0->C<#T*UQQ X7H4KD?A'$#L4;@>A>L<0/8H7(_\"]1Q  "
+"       '4 *UZ-P/0H=0!2N1^%Z%!U 'H7K4;@>'4 I7(_\"]2@=0#,S,S,S,QU /@K7HW ]'4!(X"
+"7H4KD<=0%*X'H7K41U 7(_\"]2A<'4!F9F9F9F8=0' ]\"M>C<!U >Q2N1^%Z'4\"%ZU&X'H4=0)#"
+"\"]2A<CQU FIF9F9F9'4\"D<#T*UZ,=0*Y'X7H4KAU N!Z%ZU&X'4#\"]2A<C\\(=0,S,S,S,S!U "
+"UZ-P/0K7'4#A>A2N1^$=0.Q1N!Z%ZQU ]BA<C\\+U'4         >0 K7HW ]\"AY %*Y'X7H4'D "
+">A>M1N!X>0\"E<C\\+U*!Y ,S,S,S,S'D ^\"M>C<#T>0$CA>A2N1QY 4K@>A>M1'D!<C\\+U*%P>"
+"0&9F9F9F9AY <#T*UZ-P'D![%*Y'X7H>0(7K4;@>A1Y D,+U*%R/'D\":F9F9F9D>0*1P/0K7HQY "
+"KD?A>A2N'D\"X'H7K4;@>0,+U*%R/PAY S,S,S,S,'D#7HW ]\"M<>0.%Z%*Y'X1Y [%&X'H7K'D#"
+"V*%R/PO4>0        !] \"M>C<#T*'T 4KD?A>A0?0!Z%ZU&X'A] *5R/PO4H'T S,S,S,S,?0#X"
+"*UZ-P/1] 2.%Z%*Y''T!2N!Z%ZU$?0%R/PO4H7!] 9F9F9F9F'T!P/0K7HW ?0'L4KD?A>A] A>M1"
+"N!Z%'T\"0PO4H7(\\?0)J9F9F9F1] I' ]\"M>C'T\"N1^%Z%*X?0+@>A>M1N!] PO4H7(_\"'T#-"
+"S,S,S,P?0->C<#T*UQ] X7H4KD?A'T#L4;@>A>L?0/8H7(_\"]1]         ($\"%ZU&X'@4@0 K"
+"7HW ]\"B! C\\+U*%P/($ 4KD?A>A0@0)J9F9F9&2! 'X7K4;@>($\"D<#T*UR,@0\"E<C\\+U*\""
+"! KD?A>A0N($ S,S,S,S,@0+@>A>M1.\"! /0K7HW ]($#\"]2A<CT(@0$CA>A2N1R! S<S,S,Q,("
+"$!2N!Z%ZU$@0->C<#T*5R! 7(_\"]2A<($#A>A2N1V$@0&9F9F9F9B! [%&X'H5K($!Q/0K7HW @0"
+"/8H7(_\"=2! >Q2N1^%Z($       ( @0(7K4;@>A2! \"M>C<#V*($\"/PO4H7(\\@0!2N1^%ZE"
+"\"! FIF9F9F9($ ?A>M1N)X@0*1P/0K7HR! *5R/PO6H($\"N1^%Z%*X@0#,S,S,SLR! N!Z%ZU&X"
+"($ ]\"M>C<+T@0,+U*%R/PB! 2.%Z%*['($#-S,S,S,P@0%*X'H7KT2! UZ-P/0K7($!<C\\+U*-P"
+"@0.%Z%*Y'X2! 9F9F9F;F($#L4;@>A>L@0'$]\"M>C\\\"! ]BA<C\\+U($![%*Y'X?H@0       "
+" \"% A>M1N!X%(4 *UZ-P/0HA0(_\"]2A<#R% %*Y'X7H4(4\":F9F9F1DA0!^%ZU&X'B% I' ]\""
+"M<C(4 I7(_\"]2@A0*Y'X7H4+B% ,S,S,S,S(4\"X'H7K43@A0#T*UZ-P/2% PO4H7(]\"(4!(X7H"
+"4KD<A0,W,S,S,3\"% 4K@>A>M1(4#7HW ]\"E<A0%R/PO4H7\"% X7H4KD=A(4!F9F9F9F8A0.Q1N"
+"!Z%:R% <3T*UZ-P(4#V*%R/PG4A0'L4KD?A>B%       \" (4\"%ZU&X'H4A0 K7HW ]BB% C\\+"
+"U*%R/(4 4KD?A>I0A0)J9F9F9F2% 'X7K4;B>(4\"D<#T*UZ,A0\"E<C\\+UJ\"% KD?A>A2N(4 S"
+",S,S,[,A0+@>A>M1N\"% /0K7HW\"](4#\"]2A<C\\(A0$CA>A2NQR% S<S,S,S,(4!2N!Z%Z]$A0"
+"->C<#T*UR% 7(_\"]2C<(4#A>A2N1^$A0&9F9F9FYB% [%&X'H7K(4!Q/0K7H_ A0/8H7(_\"]2% "
+">Q2N1^'Z(4         B0(7K4;@>!2) \"M>C<#T*(D\"/PO4H7 \\B0!2N1^%Z%\") FIF9F9D9("
+"D ?A>M1N!XB0*1P/0K7(R) *5R/PO4H(D\"N1^%Z%\"XB0#,S,S,S,R) N!Z%ZU$X(D ]\"M>C<#T"
+"B0,/U*%R/0B) 2.%Z%*Y'(D#-S,S,S$PB0%*X'H7K42) UZ-P/0I7(D!<C\\+U*%PB0.%Z%*Y'82)"
+" 9F9F9F9F(D#L4;@>A6LB0'$]\"M>C<\") ]BA<C\\)U(D![%*Y'X7HB0       @\") A>M1N!Z%"
+"(D *UZ-P/8HB0(_\"]2A<CR) %*Y'X7J4(D\":F9F9F9DB0!^%ZU&XGB) I' ]\"M>C(D I7(_\"]"
+":@B0*Y'X7H4KB) ,S,S,S.S(D\"X'H7K4;@B0#T*UZ-PO2) P_4H7(_\"(D!(X7H4KL<B0,W,S,S,"
+"S\") 4K@>A>O1(D#7HW ]\"M<B0%R/PO4HW\") X7H4KD?A(D!F9F9F9N8B0.Q1N!Z%ZR) <3T*UZ"
+"/P(D#V*%R/PO4B0'L4KD?A^B)         (T\"%ZU&X'@4C0 K7HW ]\"B- C\\+U*%P/(T 4KD?A"
+">A0C0)J9F9F9&2- 'X7K4;@>(T\"D<#T*UR,C0\"E<C\\+U*\"- KD?A>A0N(T S,S,S,S,C0+@>A"
+">M1.\"- /0K7HW ](T##]2A<CT(C0$CA>A2N1R- S<S,S,Q,(T!2N!Z%ZU$C0->C<#T*5R- 7(_\""
+"]2A<(T#A>A2N1V$C0&9F9F9F9B- [%&X'H5K(T!Q/0K7HW C0/8H7(_\"=2- >Q2N1^%Z(T      "
+" ( C0(7K4;@>A2- \"M>C<#V*(T\"/PO4H7(\\C0!2N1^%ZE\"- FIF9F9F9(T ?A>M1N)XC0*1P/"
+"0K7HR- *5R/PO6H(T\"N1^%Z%*XC0#,S,S,SLR- N!Z%ZU&X(T ]\"M>C<+TC0,/U*%R/PB- 2.%Z"
+"%*['(T#-S,S,S,PC0%*X'H7KT2- UZ-P/0K7(T!<C\\+U*-PC0.%Z%*Y'X2- 9F9F9F;F(T#L4;@>"
+"A>LC0'$]\"M>C\\\"- ]BA<C\\+U(T![%*Y'X?HC0        \"1 #@   ,@?   &    \"     $"
+"         !0    @    !     0    $         #@   )@?   &    \"     8         !0 "
+"   @    !    [0,   $         \"0   &@?  !?;9[>KD78/P<W@3*2*><_KCVZ045T \\!2];"
+"0C.\"OI/W_9\\3QKR>N_3.5%% /]R[\\/CC=/ VK4/RW5PD9H^^*_N<UR@><TZS^B;WC=XF#B/RW("
+"^'# GN4_,=\"\"T_ONSC\\P93!U1QSPOV6CZ$?&U?\\_\\$IO/R8DV[\\N#>_6;N3M/Y@NV2Q/#]0"
+"_\"!&OF3BH\\#^:DG*9G9#RO\\#!)FBFYN6_:B]#X7ZSZ#\\^ [Q(-?SP/\\>?\\4V.VN>_Y[XV1L"
+"E,]C^6\"7C<+9GZOT.6YN!LE?F_N(*Y^^9[ZK_;^P3YOK?V/Y%O, ME.^2_#28^305]YC]?[]: ;*"
+"3)/X*^NOJ<(?D_'3[7D4X(_K\\!!9_\\<-X P U4W/_1D.B_CEX>?''XV;\\\"\\58D]EWR/];O-="
+"%7>>X_X6!==.8JYK^+C/RPN7[TO]\"S-_*\" .*_DL[0M2TZ]K^P\\#;D^A[C/Z?J#>CH7=8_>I!."
+">EAK]#\\7K[X1IO^KOS[8GM\"HS_2_?QM'UG;SPS_#I,H.+^.ZOW6J=Y%3U<Z_5C3P!^X+Z;\\O.?"
+"<%'@CPOX<-/Q/<^_>_'F6) 9YL\\[^0P@NT6OKAOYC0,K)<Q?&_E:R)>P6T]#_9Z>@/V4';OQG:V^"
+"-1'-^_AOMM% [TO+]_4IVMU&CT/SY<;BJ?V<._#$L*$Y*:Y#].OGB8;J3WO_>7S0UDTM^_4?5\"C<"
+"?L]K\\>Q)D,D6? OV6#5BWTA[<_*>T(L2</\\S^/_1O F<':/R\\U78^5F/,_UT'__X=2 T\"22:I"
+"C0Q[U/]UZ,-Q*T^N_JWH^CG3FZS_(EG%'KV?GOWX-I.8 Y\\B_^4?=TP)YY+\\KIHXTL5W:/^TI:6"
+"(\\<[(_?'S&AJ [Y[^M+MYC\\;GS/Z+[](JO=?$_L\\BNI+DY\\3^WY7CSPYZ9O[-!G.2W?>,__!C"
+"IFVAJ\\S\\$:!WL#:KPOR(?#W-LB;B_NGIR4<\":LK\\U1!P\";'#B/P&*QTI()^2_U]Q-( ;!\\["
+"\\?2<MV4.#=/YTR\\#QH8LD_D\"D9@O%Z^K\\ .9]EGY#EOPS(-)RC7^D_%=PKZUL^]#]4:/(@WJS"
+"EOVO8^/4(..J_>0&VN\\_$X+]DM>F*\"6SW/UBAYK<,-=L_MM=SOZ<&]3_>L6'\\[2T 0#PPNT0<Y"
+"^\"_A5_8%T?HXS]W\"RR43 7//R#3?,759NH_&]B+^D!EYS^3G.!E6:/W/RWZ5&\\7;^<_G&J$Q3J"
+"Q \\#E,X^RHI^;/ZY_A\",2)^8_4I_<AJ7BR;]86 #R>@?H/SD2 :^;(\\*_AJCC2\\<KW[^^[WS("
+"5G'BOYMZ>- A@-2_(M2^3LN%Y3^F(?05T,3*OY(B,B2CV,V_?=+% '3+^3]6PWUCKQ'I/^\"K='W9"
+"Y.,_T>98,]05P#^:*'6G$G0&P$(V;TV>^/<_,(V33RX X[^I=:Y07Y'IOS2%]H$7%P! 9]3T5\"6"
+"\"US^),H';KH'UO\\P2Y+=$YO0__/G3Z<;MXC\\\\O J\"BD+DOX5*U5&NE_H_WTXD-KJIY3^N]96"
+"4Y.J]OQ^W[0\"E8/^_'3K&PK X!D #@&86AN, P (X26>\\G/R_FOOS7VHKZ;_$^XR;&[/;OT?'&B"
+"]#T^X_O#QFGP6=];_!T/FW22KZ/V+YPNX-$/0_?U<:PA]>[;^S.M24\\:[7OP6I=\"9YSND_E_!O."
+"IE4NS\\0)MZP]/S4O^POT;SW2,\"_AO1)&V%!Y3^2 J7+6IT'0-_&$Y^&HMZ_P6T:1M4[\\+]GC$_"
+"(9[?:/P^@&-?G2\\$_O:GIN].F\\3_UT=(4LR;AOSA 1-=)Q^V_>VP(.S/#Y;]R_J(8K&'_/QHQ#"
+"\\.Z:^P_2X66#8/Z^#\\L@W3Q]V+I/_K9DGO6\"]D_^1CF_8.:R[\\@26S;OTVSOQK3X/+KB:P_0="
+"A:H($N]C][-I3%L/K]OT3Q@K4R-0- P:PZF0YT[K]A;U*-E)*YOY[8Z O2].4_L2L@H(\\5!,\"Q*"
+"R\"@CQ4$P$87022H%?(_1A=!)*@5\\C\\?%K\"Z7&K*/S\"13 )NZO2_06.>G:L9W#\\.--AF.7+@"
+"/Z/+]CS0>?6_\\X/H[;Q\\]K_O6GN6X&0\"0$4@(\"W0'=(_ED)XIZR0\\3^/\\SCP\"*/Z/YO).^"
+"\">\\]8_K\\9@]L8L\\;^N$@\\@6E+<O_:M5#^9\" # ]JU4/YD( ,!L:+UV3W[4/VQHO79/?M0_["
+"X99/NG+<#_&+YRG,(6#OX/7^!E'._>_KBIB5@M> $!R*&*6^.7R/QR/,IW8%N8_#<IT@1CMPS_TB."
+"\\C%!/?/Q-P A?)J/ _$T^^18?=^3\\#\"W\"*J+NT/Q\"!J=L5O@' >/(!,'M#[S]NV%VHRZT$P'"
+",--U*BQ-\"_XI<SY-&!ZC\\74]];Q4D#0+T(Q6.?O> _M>POHFH@T+_V!(<B@:'3O^QN/28\\;>\""
+"_4\\(*6)Z3Y3\\9X>#AFIW1/Q $9\"QA<>L_RA%JIHM:\\3^_3GR&QX[AOT0T< _K4.P_ -NE3IQD"
+"^+_[)T#7B?+O/UPUQ0^KE]R_,5);2>G<Y#^ #I-22>_KOY0+.D^IVWH_)&[T&IM-P3_?P[\"GW;W["
+"OZUN]63<5\\N_:3>X5W9(Y;_9KA%R1QSA/Z%8,%,%Z[\\_Z<.D*!/%P;^:)?A]DIW^/UM!1/%M!O("
+"_W \\ZQ9V3X;\\@I:>>+8GQOT TVRO$F[ _()19EAMCY#^L[7EY <?K/[4YCDXM0-N_B;5S#$<9M+"
+"\\2L[C)\\MFV/]](\\\\^(7>\"_\"J5JK-W$WS_Y,PQ@5''WOWD=VC=6Z.J_BWXCZ60TS+]D[KH#B"
+"WNJOR\\6=H2&I?\"_LUF;+YGC]#^V-WC[PLOLOP'G.6Y/ZL(_NN,4 \\_!];_.9&N:!-7TOVBNTUB"
+"UZ>L_RR=#.DXS_#]RB,+12 G\"/\\S..<6>X?$_;V=\\2%UHYS]D[^ <(ES:OW#P601ZB;8_#Y<:P"
+"RNT[[^V89=J+RWU/U5HY5-]'_,_N?9,88#[[K^K7 L0+WOT/V>W>\\IY7<T_JR?8UF4_S3]6]$C:@"
+"&KA/^U@LLE9@>T_%FD8U5U<[[^)NK,S.U?7O_9]P$[D#NT_SCR6S3O= , E7<G)=9[IO_9/'YGYD^"
+" _^K/I&[4,YK\\PFX)P/&C;/^2^[7($X_&_7YOAQ8><W+_1)%6.PHO0/\\!LX&9S,=$_33Q:E;\"&"
+"V3_^T3*:4<[V/^?E[B8[Z>\\_&1'#,'VSZ;\\U7LYX!J7OOX5$Z:JR>?\"_I2R3(>@UPK^VL&?\"#"
+"YKW/]:C&/\\8U-Z_'-WW7%<LMS_*B&F^_//J/[J66?NWM=H_F-V>08(VV+_I,#E:!Q;]O^._ZD#_O"
+"/$_$;D^4K9#NS\\ADSA&2Y;:/VVOR]FXM=V_?*TA6L[1SS\\?&>+J'QCU/[W($+&9&OL_(QB8467J"
+"TC\\X<F:H1@/RO^)GZ9YC$>X_]=9*2@YN[K\\[HY_(F=G[/\\1=YIIL9=V_+;+QXUU+U3\\)<T.7."
+"G#F/T=(2*NCQMT_5HJCQ\\P:^+_'M[4D+G[>OQ[*8]57@=._P)>B,9G]X#]7=(2 5&/=/Y9)<TG;%"
+"+8_8UX.<84?T[_4FM6$J&+F/T:&7=OG&^H_PYULL6ZUX3^T15B1C9_XOXMPOHV?5>L_S==;;S'\"U"
+";_HOB#M*TW0/WMIRED3X]R_UKP^T_+OTK\\CD.JS'IW]OSN&[0)J3?0_F+#1LW-TWK\\?A8'%>2;D"
+"ORP\"24Y2>NX_A=HUJ7!N\\3]8M ^PQP?W/^$A$2KT>L0_:>;P,W*6YK];486>HJ#VOT?2$YSJV?<"
+"_1L2,G_>=\\K]]J2#_KB#DOU@<CB,KK=0_W&<![]3&U3_?,.&%?ZS!OQN[,>F]L]J_V$5-4]60T+_"
+"*!DCD>P6>/U$XJCM](<<_44^?#HDTX[^\\T- @-?[$/ZM2D\",V^?D_D@CH,XDJBS\\%YMC@ QSQ/"
+"\\YQL3I:<+^_5NPY5@VQB+^+YN#I%RC(/R&Q_YI,=^ _7>-M1IE8VK\\]?8\"$#&#1O_[UB%H!GN("
+"_Z&UFK^^/T[_&]33;=K#+/TC-PL1J%]L_%+0L3>Z5ZC]@ IM[XWK-OTC':*RA0=P_S[K(1V3\"[S"
+"\\OV.8C'<_S/ZSB# @:9>>_R!G;7</6 T!M\\\\4,NE'Z/ZO$@^SH<.2_G-P#-2<8V+^U:\"1^CX#"
+"GO[.U%8F<'_\\_W.1YAS0SZ+]EDE1U.>WB/]#%LO!1?>\"_KR] UN 1KC_6Y<\\*#.#POXZ'\"-U."
+"6,&_=XFHH\\2NYC^TPDCGM1OL/RL_3O?5+]B_]-I/<E\";V+^G1<A*]/$ P%-\"B:%2<NF_X K 9Q"
+"+T 4!5:U^F$\\;1O\\I@WOHO&>D_EOR,1YRFOS]G0WGM\\?[?O]E#/3@*(-L_V*+VRFC]V[_CC20?"
+"4Q/\"/RES^\\LC]\\@_3WWK,L/6\\;\\40.]:1=#>ORL41#/N4?0_5'2/J2-=U3\\ 1!-AI7?F/UM"
+":Q']Y]P% 0\"0Z%2&$Y#^.O+.M-F[HO\\@G)BI?@>4_0*:6L)A1U#^%?C(^J1'\"OZ9E!*JVI. _<"
+"FO6C,XJWS_-8=*SO !SOUR/S@IPS>T_'/R:@C/RQ#\\1.\">?/J$'0(_\"-@G,<_4_P]AJ5V_SRK]"
+"=WXRRC'KSO]\"SI>>],N8_N#\\VA1X#XK_ ;0 ?]Q+SOZSG'XMV>;>_)]_J=>=TX3^ GI4^H#K0O^"
+"%E:ARRY_ _+#:\\(*1/H#^UG!#5ZAV@/].'/>6#0LB_HPO.<!,KYK^\\)P,]?S*QOVVM#=9U]O4_<"
+"CQ38;E6X+_#\"V2U;:SO/[0 ZS.J]^F_GKI-5UA2PS\\Y\\*2QR_+;/PCL\\^D>GN0_#<MH!&#>T["
+"^H5_;+*:34OY6Z=U5NL]0_$B-(>RC*_K^P<OD-*E_WOS>?Q ?GKMF_$+KR?[Y\"O[\\FC@%U:J'H/"
+"Q?TSX?7!OP_M[0\"8<'PLS_FI]]^CX;SOXO99[XWLP' WDM2.-_4X;^@!VM7&_[T/XBM2R0I,.&_W"
+"D(7:E<UPS]L%))^2G?I/[I3TVO$.,(_!71,?3&*W[\\BB_96MQ'E/Q64XP$IJ?:_<+0O*8(_N3^7R"
+"KA,^'/N/[B4TLMD%-<_YOZ):SR3\\3]ZKKDLZN;E/P:NV?H$H>H_Q?#72#6!]+\\TLZ,N#DKC/U:0"
+"U#[HA.0_&5C<00+*O[^L&&Y^\" WDO[181M^0R=2_$#9<1:\"&SC^*HX1\"2TFTO^^5724&..2_OU"
+"=.%5J\"\\C_=)N1#-E?*/Q'AR:VHP^6_<\"C7(B?3G[_?3Y2,71D%P'OX)J9V[\\:_8&^<XOCXWS_"
+"J$.EEL8[NO\\5)HTN59N*_B>?PS3MEVS\\Z(8<BXC#;O\\@FZ3A;5= _RKK1_YC;X;]/3GE;:<S8O"
+"T,BG:_-0O<_*3Z\\++'N[K_]\"7B#^Z'(/]2\\#X_I+;2_96W-Q4?NT+]_ZS1EL__HOX#'#<6PD>Z"
+"_7<!X?4YRZK]2?_ <!KSW/^N;UCM[1.:_>G3J;M;FP;]*/BVI?SOQ/S(_)SNFZ]B_NYM4-6S![3^,"
+"HG( Z4'\"O]7L##UN2?:__$E*P0E>\\+]5J+D86SV\\/[L-\"9_B=NZ_$1NOF)YLY#\\OAD=0)\\'"
+"[OQM\\AH@H)M0_^0)Q$,V?X;_+,(UIM1CKOTL[*Q17B=&_X^_,,[E&]S_W!BDFT*[MO^H3OO U%/("
+"_>[66S\\D6Z+^+8TYRN>;'/WY3NN*WY.6_H/X.11P;>[\\5M&GJ04CW/_^X3QR4:NZ_ET!&])$AW3"
+"\\QLOQC9,#LOP\"RXYSWD.J_SGQ?&$Z-Z+^K@]USAPC8/]330HY?^MF_?J&S0E+?P[^<0^@$K);\\"
+"/Q@^6#'B%N(_TE[(X$\\DTC\\\"$43?H!/LOP9K.4#E6?._A2135Z-#F+_=&6S>F,SPOP-M7\">HX"
+"^D_2UN\\7ID0XS\\AD,Y_XX/#/RP.B-2XY=8_\"PT\\./\\BJC]9U5M47[3EOU^L8\"54>\\L_K)R"
+"L%VHV/3]T&T\\7.1WTORV0EW],O.(_)^5G7=W8UC_7THR1*I3-OY#/1$B6%N,_#>#!&=<F[+\\KK5"
+"DDL9?P/T]TV\\V]\"MF_V!:\\/FU@YC_!3Q, O1WD/R[$\"L!7D)8_;+=/;JU.\\+_B.QN0\"(KI/"
+"[[<$PT;DNN_V),&!9?%ZS]>3,A$=G[QOT,@U]$ (=J_,+2[/B+-ZK\\ D!LEW]WBOW_#+0:@\\?0_"
+"2(5ZX7E. T\"A[$U^B 'BOS;<T&>\"Q/F_5'#P#E*OUC_^5),U6''E/T:';M1B5^2_HBA:[P/6Z;"
+"\\5M3)L;:;-/U)Q/F X1/,_F3<H=NG*\\[_\\C OO-42[OPT2\"V UWNJ_M'SB% ?HZ#]&82>4R)7"
+"9/^53&)B6]=R_Y@;C4;GCZS^U>YXFAU<&0/O3G0Z]WM\"__1D81T\"AW[^G%WC?4QKQ/]C3\\G)$]"
+"^6_[=(^DX!UW#]OSD)=:.[@/Y\\\\!'4*R=,_D@_5\"-(][;]4[=R-\"4/IOYBV] /_'=2_H6Q\"K"
+"QG2[S_.U>G]UE'VOQG\"$Y(J(@3 @G^)Y<JK[S_'8!\"MJ GUOTYS=$VLY.2_T:S+\\!QW[;^]H&_"
+"SETG:/SB#Z5&F<>._Z>Y\\AA:BX#_^E)/[02/<OS%PZ5W),=\\_A25W5AG*][\\L3<ZY'V#T/_^A!"
+"D 3!-:_#'!+% R_PC]<GLP2AR3T/RU]#06B3.$_I+9DU#/;UC]%S3W_X9[QOS DE\\3MO?._KI!F="
+",.<Y3]B6XYI,O+ROQU4( &RM^\"_EMW[[I\"PXS^!U!C+9*SNOUL?=EZZ]-._T?-IC*W>RS_\\!T?"
+"N:T-V/QVL0>P3F>,__=%7#.[*XK\\S6B_0%$L%0.Q6R;NH]]J_\\%'\".<KHZS]2Y5C0AX'V/R:*;"
+"5+&Z^P_8]UF9&]>H+_[_Z6=W3GBOZF'<&S6C[4_<@U2Z\"YY\\C]4@:31WC&SOQD%PW5&C^(_\"P-"
+"@O:NMU[_@\\U&+L6G[/^YZA\"YLQO\"_+JX<UT\"]Y+\\OP27*HOK3OR&=T8%?X^D_M!7FSR)D[3"
+"\\ K3G3%/O5O]W/U.L#;>&_(3.G;L2> <!!0\\&K)QKEOQ+RQ1>70-$_:)KJTV0.R[\\ 1+\"8TI+"
+"S/ZV+F<$,\".8_,F!? %]_K[^S>7Y4P73HOX/W# JPM_(_15\\1HT^1_K]_;KO2!A7:/YZD<EJO L"
+"B_G/C_0,9__C]X,,3;M0#IOWM>?V;@'/8_-G:'=P!%V+]7L3,0_CSDO]&6TB]:'O2_J](P1OH\"Y["
+"]&FM$DL5OHOVU:KFL[N^<_C*)J=CAB[S\\D$WOV)-CV/Z<VQH9?D>@_W:[F?0G]]C_E4SYMP=>@OZ"
+"X5\"<E\\I.T_N,ZNU^-LVC]^&SR(\"+;\"O^,G(N55%_H_.M[M<-=0\\C_K!&WR?&7VOR=V:9F0K>"
+"0_@G,'PC)#YC]MOM8YD S,/^SX[SZXM]2_!YVO,!XO_+]CMI%@60:COR-73[/00]D_&4KK5?U3U;"
+"\\BWP*H9S_J/[$B/*E-S-^_AKJ].K4;]#\\2;HU\\(*'#/ZRLS3&K^.T_KJ#GK,B<[;\\BM6$U\"C"
+"_OOR/%T@V3_N&_\"G0<M.ZBU[^2EE7D&.'7OQ>'4$77@.^_![&[TP.EP#]L'_@X:X#TOZI%]/9PE/"
+",_@5CR]JJ+Y#]A-]!NNE#J/^0SH1Y8MN._%#W83(GZ[K\\_-2I[_MOE/YPT7ZU/[^L_J\"JNWQ'+"
+"\\;]$V(9F;O?T/TH5.4RZSM\"_9Z]X8;$QF;\\J'H7GNC[4/U\\2?)3(5M@_NK,JH:.LZC^W43X\\"
+"F1'G/_Y@3+8/4-H_6E3:+FY2Y[^5/8-P!P31O_AG%N_\\OM8_FI0J3K]?Q+\\@-25:)H;VOSE\"A9"
+"\\_X^J_O<=G[:3/PC\\<,1%+E)/JOY4VS5AD4 ! ,$\"UU I.Y+\\Q?;33/ 7WO[8(,31,I?._84P"
+"$>RLIYC_>,UQY7_SQO_!EEXL?#I\\_C%@V3H:9\\S^$4N 9E0C/OW)5K^P/:N^_:6JRWQ@\"\\3\\"
+"*<KYM.*+D/XFC:.6=-P! QSOHC4+>_;^G^(S,$VWC/[35-)[OR>\"_XGCU2>@.UK^(TU'B0+*]/VD"
+"Y/./)WMD_CP9OK9E! T\"G(IYDB97UOZ<K34N6#/._1EM:6SD>Y3_D8)YMWO/B/P_6B.+!@O\"_U1"
+"+<W\\3+^;^KS;W65GSGO_$T<;!C7^&_-\\I84P'TS#__RH!RM7GA/\\ISNRLVO<^_ :$VO0Y5ZS_]"
+"T<E%&7[NOYMI55@Q<.>_%2 A6\\*?US\\F:<5^]AOEOUNC&+ )I;&_HK%*>CVKVC\\L8G33@.'^/Z"
+"8B'Y7;D_H_KPT>/URF_;_U(?>EU>WROP6\"7M0%I=0_(FPHLUXARS\\<O13F?F#OOYIAN[=/$:4_G"
+"CL!3_!DG#^FFBEE;6BDOY-OP/(I]>B_-KA#7.L^YK_,Q )E=RR[/^2KO]):$+H_K,A@O'&<IS]WXE"
+" S;-.H/QSQ$F5&C^Z_NR?!VOMUS3\\\"@L3JYF_^OW91-:GC7ND_<@#-3$;EEK^P4%.)?*/<OU-1G"
+"V.+RP! \"*SPAV7O[;_&L?+L&KOT/U@1C5B'S<F_DR.TM65R_;_4'HLPD(+QOUN0I?ZYY^&_B+*!V"
+"2Z3RC]731PV&^#3OY1AQNJUZ>H_D7*EQ)5GY#\\V/&6B>L*E/^ER&D( WM<_4;Z><\\W1Y;_[G0%)"
+"DWBCOPNGX$XS4^ _8>QK$^]!RK_!![C@V]3QOP>S+A-$&WB_Q>3)>_CTU[_2$*KQK9+AO_NRF=M07"
+"_>_X(H=_5:!Z+_.G8_7@ './TASYJ68I0) BHYI9M'6\\K\\HU7-(7H[?OS3WD#Z':)>_I@A5\":T"
+"&L+^/8@Z)@3'Q/SC_PT;*2]0_0+4JBJOZ[[_?<<'0P(#_/Y2'4&9)2]>_@@*;\\PZ6L+^-\\(:&)<"
+"'8OT0;4X02>.*_U+Q;MBTMHC\\..^.:M8?DOTX?1Y%E8>0_+13ZH?&P\\[_L&B<Z\\\";[OR]-^&*"
+"\"\"=\\_9#VM#VFI!T\"24%0_WBW6OQKE:UV]R^&_-%L.G_[/S3_!5]0^E[7@/T4$;@5*A/&_<H2Q"
+"/+@W7#]4PKC0.^3DOQYB&4C)\">._6&8X:V#HOC_S!*MG5P3Z/_0.4L9#?-B_](!D/5\\+Y;^R#S4"
+"H?U3\"/TU\\%6,^ ]N_G/)J(B5#ZC_VTG$=TTWO/TR>OXC3JPC Y2?5CN3#Z#]^4)L*PJS2/\\HS2"
+"2RJ;?H_;!M6\"WDR\"\\ /A@\\AGX_0OTQ,4T;C./&_;1\\]E)6PW;_[5=Q)[[7<OTK K=O4]>T_5"
+"S=^_2 _W[]9+MWA8!CC/[H#;:>_3@% Y#FK3:/4^C_[R))^9*B^O\\08/WNJ(^$_]7?;@R5_^3\\-"
+"2XP^ OOQOP!HOYZ#%/\"_6'2+*B2EXK\\2.2ZN=MG9OZ[AO$\\#.\\>_%98\\@HE0\\K_=P*5EY_["
+"AO\\GE--(Q-M,_BA\\[:L8/T#^R?YGBP*GQOV\";(+S#\\^4_3ZS<F@;>[C^4%),R<^3OO_3%'HX<"
+"B.\\_X$G_'\"!4P+_N.AP\\--JR/_N+\\DMVC>F_*O_*N[;+Y+]Q\\D7;@_GT/R:EX^2T<O8_VQ6!"
+"4#W4 ,!5'I,S:];QOP5.6&YZ\\L*_X0^VXPB]ZC\\Z!DNS5U'R/UFH:ASA8MX__#88QJ<YU+]0/MF"
+"H7,K^/^XP(5G<<><_@AR*$8\\/X#^L430>_1G5OZIN9491_<\\_?Q,.TX;N\\K_?0A\\Y31'LOU5<"
+"7>Z_]/ _C[+238')XK_AY>_T77;Z/\\0NN. J\"-<_PON+#K NY#]#@90E'8_EOZ0/ D=>N^8_A1_"
+"^7#2HY#]D@$G=>S+H/PO;JN4<%_(_K5-\"\\__YZ[\\@W)7=<]'IOP# ,>>UC(Z_9:_/(UH(\\#\\"
+"YP[+UF2/=OV[\"#&PMW[B_PU\\O,8]AZ3_%SJ6H#<_RO^>I)57'_O4_<3U:\"BXDGC^]9XNSLNOYO"
+"V@ E].E:MF_F0(8\\V >E[]\"NC,O-J=R/X\"PJ @-K>*_I59HN=$GXC_W!I1:0N':/_6 :1BC>->"
+"_69<Q)B9LX#_Z3X %V-?Z/T=\"0L$K9.\"_\"<>RO;[ZWS^MF/:)U(+D/U\"JT>.VQMX_ MDA7JX?"
+"[#^D*0[;Z#/QOZ5_=OS,?]^_DL;U(0UK]K^_0GD@?((!0&_AIV%:)<X_NXQ0)EY^]3^5]\\E9..7>"
+"OS_\"V+RXQ,H_H<I<4%$8^K_5BA$QE93EOR9--!C[K.&_4?5A>Y?7X3_T-Z%5.F%UOZ![7(]HQ-(_"
+"S1Y\\($%AUK_W7M86$)G+OQ\"C5/VQZ9F_8C+7QC^4X3_/2+#MNK'=/T=X3JR3V](_7F;0+E),Q[]"
+"1G?=6?;*TOW 7=SH0H_2_'2 X+\"L?YK^<KYT$#A[[OZ<*\\F5_>LZ_91POR38&Z;]ZX:WYU6/GO["
+"T28 S,#/._PZ;PS(Y, 4!3)<@GGK+@OWZ2BUJ]P/*_M!QKZ$2.ZC\\ZH;7R,R#0OV=%EZ,%AN$_U["
+"*\\8]*0T+_]O#U['+[2ORM-]-W\\6N._(R,OB31L[[_2N<=O7^[IO[TXI@V!(_\"_'RQ(*H(:][_C"
+"6U.J=Y#X/\\EH#R5I,O4_'X\")^@!K\\K_FH5S:?0GM/X4-OQMZ1+@_T-]D[! HX#](Y_Y+)N#6/R"
+"E!,W79CKJ_UA6\\]MX=\\#_\"C+E!5M/<OS/IX$,<X-B_/*'']+P$\\K^$<LO\\+7_J/ZB\\J-D)K"
+"?8_[D7D0!2?\\S_?EZDM;?V;OPK7*=5G1/,_E=15B#90ZS]$7M,=PH7>/^X-]%C3..^_944,UK5 ^"
+";^1^,8;IT74O_'U.TC'V],_R[M*\"=HWZC]I9\\4NP+&]OQ5'TPBQ#_,_2ZX2]6?6\\3_!*I\"2+1"
+"WN/[6FQ*1'1-*_N%/S4HA/NS\\.    L $   8    (     @         %    \"     $    ! "
+"    0         %  0 \"P    $    W    8VAA;FYE;',   !Y3&EM         &QA8F5L4&]S "
+"   ;&%B96Q(      !L86)E;%!A=&-H   .    .     8    (    !@         %    \"    "
+" $    !     0         )    \"            / _#@   $     &    \"     8         "
+"!0    @    !     @    $         \"0   !             0P        !! #@   #     &"
+"    \"     0         !0    @    !     @    $         $  \" %1,   .    .     8"
+"    (    !@         %    \"     $    !     0         )    \"         _ 1^% #@"
+"   #@    &    \"     8         !0    @    !     0    $         \"0    @      "
+" !*X##A0 X   !H @  !@    @    \"          4    (     0    $    !          4 !"
+"  .     0   &(   !D:7-P5&EM90       &1I<W!-;V1E        ;6EN5&EM90        !M87"
+"A4:6UE         &%F=&5R1FEN86Q3='( <V%M<&QE5&EM90    !Z97)O0W)O<W,            "
+"   X   !     !@    @    &          4    (     0    (    !          D    0    "
+"                   D0 X    X    !@    @    &          4    (     0    $    ! "
+"         D    (            \\#\\.    .     8    (    !@         %    \"     $"
+"    !     0         )    \"               #@   #@    &    \"     8         !0"
+"    @    !     0    $         \"0    @            D0 X   !     !@    @    $  "
+"        4    (     0    L    !         !     +    17AT<F%P;VQA=&4       X    "
+"X    !@    @    &          4    (     0    $    !          D    (            "
+"   .    ,     8    (    !          %    \"     $    \"     0         0  ( ;VX"
+"   X   \"  0  !@    @    \"          4    (     0    $    !          4 !  .  "
+"   0   #@   !A8W1I=F5$:7-P261X '1I;65286YG90      ;F%M90            !D:7-P;&%"
+"Y4F%N9V4   X    X    !@    @    &          4    (     0    $    !          D "
+"   (            \\#\\.    0     8    (    !@         %    \"     $    \"     "
+"0         )    $                       )$ .    .     8    (    !          %  "
+"  \"     $    '     0         0    !P   $=R;W5P(#$ #@   $     &    \"     8  "
+"       !0    @    !     @    $         \"0   !                       \"1 #@  "
+" #@    &    \"     8         !0    @    !     0    $         \"0    @        "
+"   #P/PX    X    !@    @    &          4    (     0    $    !          D    ("
+"               "
+  }
+}

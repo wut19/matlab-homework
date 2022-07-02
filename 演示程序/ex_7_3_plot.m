@@ -1,0 +1,11 @@
+figure;
+subplot(1,2,1), hold on, box on;
+stem(n,hi,'k-');
+set(gca,'YScale','linear','FontSize',16);
+xlabel('n');
+ylabel('h_i(n)');
+subplot(1,2,2), hold on, box on;
+stem(n,hf,'k-');
+set(gca,'YScale','linear','FontSize',16);
+xlabel('n');
+ylabel('h_f(n)');
